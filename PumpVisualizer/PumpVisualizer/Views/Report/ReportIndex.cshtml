@@ -1,0 +1,64 @@
+﻿@model PumpVisualizer.ReportSource
+
+@{
+    ViewBag.Title = "Создание отчета по объекту";
+    Layout = "~/Views/Shared/MainLayout.cshtml";
+}
+
+@section Css
+{
+    <link rel="stylesheet" type="text/css" href="~/css/jquery.datetimepicker.css" />
+
+}
+
+<script src='@Url.Content("~/js/moment-with-locales.min.js")'></script>
+
+@Html.Partial("topmenu")
+
+<div class="container" style="margin-top: 65px">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+            <h3 class="text-primary">Формирование отчета потребления объектом за период</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
+                @using (Html.BeginForm("GenerateReport", "Report", FormMethod.Post, new { @class = "form-horizontal" }))
+                {
+                    @Html.AntiForgeryToken()
+
+
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.DateParam)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.DateParam)
+                        @Html.ValidationMessageFor(model => model.DateParam)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Identity)
+                    </div>
+                    <div class="editor-field">
+                        @Html.DropDownListFor(m => m.Identity, new SelectList(Model.Adresses, "Value", "Text", Model.Identity), new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Identity)
+                    </div>
+
+                    <p style="margin-top:5px">
+                        <input type="submit" class="btn btn-default" name="ReportType" value="Суточный отчет" />
+                        <input type="submit" class="btn btn-default" name="ReportType" value="Месячный отчет" />
+                    </p>
+
+                }
+            </div>
+        </div>
+
+
+    </div>
+
+
+@section Scripts {
+    
+<script src="~/js/jqueryval/jquery.validate.min.js"></script>
+<script src="~/js/jqueryval/jquery.validate.unobtrusive.min.js"></script>
+}

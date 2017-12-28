@@ -1,0 +1,175 @@
+﻿@using System.Net.Http.Formatting
+@model PumpDb.Marker
+@{
+    ViewBag.Title = "История показаний";
+    Layout = "~/Views/Shared/MainLayout.cshtml";
+}
+@section Css
+{
+    <link rel="stylesheet" type="text/css" href="~/css/jquery.datetimepicker.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/history.css" />
+   
+}
+
+<script src='@Url.Content("~/js/moment-with-locales.min.js")'></script>
+
+@Html.Partial("topmenu")
+
+<div id="archContainer" class="container-fluid" style="margin-top: 65px" data-ng-app="unicom" data-ng-controller="UnicomController">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+            <h2 class="text-center text-muted" style="margin-top: 5px">Данные из архива показаний</h2>
+            <h2 class="text-primary text-center" style="margin-top: 5px">
+                @Html.ActionLink(Model.Address,"ViewParameters","Details",new {id=Model.MarkerId},new {title="Нажмите для перехода к просмотру параметров в реальном времени"})
+            </h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+            <input type="text" id="datetimepicker"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+            <table id="HistoryTable" class="table table-condensed table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th rowspan="2">
+                            Дата/время
+                        </th>
+                        <th rowspan="2">
+                            Энер Q, <span class="ed">кВтч</span>
+                        </th>
+
+                        <th rowspan="2">+/-</th>
+                        <th rowspan="2">
+                            Уд эл, <span class="ed">кВтч/м<sup>3</sup></span>
+                        </th>
+                        <th rowspan="2">
+                            Вода V, <span class="ed">м<sup>3</sup></span>
+                        </th>
+                        <th rowspan="2">+/-</th>
+                        <th colspan="3" style="text-align: center">
+                            Ток, <span class="ed">А</span>
+                        </th>
+
+                        <th colspan="3" style="text-align: center">
+                            Напр, <span class="ed">В</span>
+                        </th>
+
+                        <th rowspan="2">
+                            Част v, <span class="ed">Гц</span>
+                        </th>
+
+                        <th rowspan="2">
+                            Мощн W, <span class="ed">кВт</span>
+                        </th>
+
+                        <th rowspan="2">
+                            Давл P, <span class="ed">МПа</span>
+                        </th>
+
+                        <th rowspan="2">
+                            Темп Т, <span class="ed">°С</span>
+                        </th>
+                        <th rowspan="2">
+                            !
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>I<sub>1</sub></th>
+                        <th>I<sub>2</sub></th>
+                        <th>I<sub>3</sub></th>
+                        <th>U<sub>1</sub></th>
+                        <th>U<sub>2</sub></th>
+                        <th>U<sub>3</sub></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-ng-repeat="elem in EWdata.data">
+                        <td class="text-success" style="font-size:10px">{{ elem.RecvDate.toLocaleString('ru-RU',{day:'numeric', month:'numeric', year:'numeric', hour:'numeric', minute:'numeric', second:'numeric',timeZone:'Europe/Minsk'}) }}</td>
+                        <td>{{ elem.TotalEnergy.toFixed(3) }}</td>
+                        <td class="text-muted">+{{ $index>0?(elem.TotalEnergy-EWdata.data[$index-1].TotalEnergy).toFixed(4):null }}</td>
+                        <td>{{ elem.WaterEnergy.toFixed(3) }}</td>
+                        <td title="{{elem.TotalWaterRate}}">{{ elem.WaterCalculated.toFixed(3) }}</td>
+                        <td class="text-muted">+{{ $index>0?(elem.WaterCalculated-EWdata.data[$index-1].WaterCalculated).toFixed(4):null }}</td>
+                        <td class="text-info">{{ elem.Amperage1.toFixed(3) }}</td>
+                        <td class="text-info">{{ elem.Amperage2.toFixed(3) }}</td>
+                        <td class="text-info">{{ elem.Amperage3.toFixed(3) }}</td>
+                        <td class="text-warning">{{ elem.Voltage1.toFixed(1) }}</td>
+                        <td class="text-warning">{{ elem.Voltage2.toFixed(1) }}</td>
+                        <td class="text-warning">{{ elem.Voltage3.toFixed(1) }}</td>
+                        <td class="text-muted">{{ elem.Frequrency.toFixed(1)  }}</td>
+                        <td class="text-danger">{{ elem.CurrentElectricPower.toFixed(3)  }}</td>
+                        <td class="text-info">{{ elem.Presure.toFixed(3)  }}</td>
+                        <td class="text-danger">{{ elem.Temperature.toFixed(1)  }}</td>
+                        <td title="Список ошибок счетчика: {{elem.Errors}}" data-ng-class="getClassRowError(elem.Errors)"><span data-ng-if="elem.Errors.length>0"><img src='@Url.Content("~/img/error_icon.png")' height="20"/></span></td>
+                    </tr>
+                </tbody>
+                <tfoot style="font-weight:bold">
+                    <tr>
+                        <td>{{intervalData().toFixed(2)}} мин</td>
+                        <td style="text-align: right">всего:</td>
+                        <td>{{EnergyRate().toFixed(3)}}</td>
+                        <td></td>
+                        <td style="text-align: right">всего:</td>
+                        <td>{{WaterRate().toFixed(3)}}</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+                      
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script type="text/javascript" src='@Url.Content("~/js/datescrollpicker/jquery.datetimepicker.full.min.js")'></script>
+    
+    
+    <script type="text/javascript" src='@Url.Content("~/js/angular/angular.min.js")'></script>
+    
+    <script type="text/javascript" src='@Url.Content("~/js/d3/d3.v3.min.js")'></script>
+
+    @Scripts.Render("~/unicomArchive")
+    
+   
+  
+
+    <script type="text/javascript">
+        $(function () {
+            $.datetimepicker.setLocale('ru');
+
+            
+            function sendRequest(value) {
+                var start = value;
+                start.setMinutes(0, 0);
+                
+                angular.element(document.getElementById('archContainer')).scope().loadData('@Model.Identity', start);
+                
+            }
+
+            $('#datetimepicker').datetimepicker({
+                step: 60,
+                inline: true,
+                value: new Date(),
+                lang: 'ru',
+                maxDate:(new Date()).setHours(23),
+                onChangeDateTime: sendRequest,
+                dayOfWeekStart: 1
+
+            });
+        });
+    </script>
+}

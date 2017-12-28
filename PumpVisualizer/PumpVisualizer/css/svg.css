@@ -1,0 +1,14 @@
+﻿
+
+.bar {
+  fill: steelblue;
+}
+
+.bar:hover {
+  fill: #f8805e;
+}
+
+.axis {
+	fill:#35586f;
+}
+

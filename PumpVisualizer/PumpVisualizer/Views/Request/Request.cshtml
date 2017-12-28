@@ -1,0 +1,129 @@
+﻿@model IEnumerable<PumpDb.Marker>
+
+@{
+    ViewBag.Title = "Отправка сигнала 'Сброс'";
+    Layout = "~/Views/Shared/MainLayout.cshtml";
+    string socketAddr = System.Configuration.ConfigurationManager.AppSettings["SocketAddr"] ?? "localhost:50000";
+}
+
+@Html.Partial("topmenu")
+
+
+<div class="container-fluid" style="margin-top: 65px">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <h2 class="text-muted">Выберите объекты для отправки запроса</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-lg-12 col-sm-12">
+            <table class="table table-condensed table-hover">
+                <tr>
+                    <th>
+                        <input type="checkbox" value="1" name="checkAll"/>
+                    </th>
+                    <th>
+                        Адрес
+                    </th>
+                    <th>
+                        Identifer
+                    </th>
+                    
+
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <input type="checkbox" value="@item.Identity" name="objectlist"/>
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Address)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Identity)
+                        </td>
+
+                    </tr>
+                }
+
+            </table>
+            <input id="sendBtn" type="button" class="btn btn-success" value="Отправить запрос"/>
+            <span id="message"></span>
+            </div>
+        </div>
+</div>
+
+@section Scripts{
+    <script type="text/javascript">
+
+        function checkIndicator(value) {
+            if (value) {
+                $('#message').text('Связь с модулем отправки сообщений установлена!');
+                $('#message').addClass('bg-success');
+                $('#sendBtn').prop('disabled', false);
+            } else {
+                $('#message').text('Нет всвязи с модулем отправки сообщений! Проверьте запущен ли модуль и обновите страницу');
+                $('#message').addClass('bg-danger');
+                $('#sendBtn').prop('disabled', true);
+            }
+        }
+
+        //  сокет для связи
+        var websocket = new WebSocket('ws://@socketAddr');
+        websocket.onopen = function () {
+            checkIndicator(true);
+            if (typeof console !== "undefined" && typeof console.log !== "undefined") {
+                console.log(new Date() + ' Соединение успешно открыто.');
+            }
+        };
+        websocket.onclose = function (event) {
+            checkIndicator(false);
+            if (typeof console !== "undefined" && typeof console.log !== "undefined") {
+                console.log(new Date() + ' Соединение закрыто.');
+            }
+            if (!event.wasClean) {
+                alert('Обрыв соединения с gsm-модулем'); // например, "убит" процесс сервера
+            }
+        };
+        websocket.onmessage = function (event) {
+            if (typeof console !== "undefined" && typeof console.log !== "undefined") {
+                console.log(new Date() + ' Получены ответ от сервера: ' + event.data);
+            }
+        };
+        websocket.onerror = function (error) {
+            checkIndicator(false);
+            if (typeof console !== "undefined" && typeof console.log !== "undefined") {
+                console.log(new Date() + ' Ошибка связи сокета onerror  ' + error);
+            }
+        };
+
+        $(function () {
+            $("input[name='checkAll']").click(function () {
+                var check = $(this).prop("checked");
+                $("input[name='objectlist']").prop("checked", check);
+            });
+
+
+            $("#sendBtn").click(function () {
+                var objects = $("input[name='objectlist']:checked");
+                if (objects.length > 0) {
+                    $.each(objects, function (i, e) {
+                        websocket.send($(e).val());
+                        $(e).replaceWith('<span class="bg-success">запрос отправлен</span>');
+                    });
+                    alert('Запросы на сброс отправлены. Подождите некоторое время для применения параметров');
+                } else {
+                    alert('Не выбраны объекты для отправки запросов!');
+                }
+
+            });
+
+
+        });
+
+
+    </script>
+    }
+

@@ -1,0 +1,186 @@
+﻿
+body{
+    background-color:#f6f9f3;
+}
+
+    .panel.panelparam {
+        margin-bottom: 5px;
+        font-size: 13px;
+    }
+
+    .panelparam  .imgicon {
+        font-size: 26px;
+    }
+
+    .panelparam .huge {
+        font-weight: bold;
+        font-size: 22px;
+        color: #000;
+        font-family: monospace, serif;
+        
+    }
+
+    .well.well_view {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.well_view .col {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#detailTableParameters > thead {
+    border: 1px solid gray;
+    -webkit-box-shadow: 0px 1px 1px 2px #CBD6BB;
+    background-color: #fafafa;
+    -ms-box-shadow: 0px 1px 1px 2px #CBD6BB;
+    background-color: #fafafa;
+    box-shadow: 0px 1px 1px 2px #CBD6BB;
+    background-color: #fafafa;
+}
+
+    #detailTableParameters > thead >tr>th {
+    vertical-align: middle;
+    
+}
+
+#detailTableParameters{
+        background-color: #fff;
+    }
+
+
+
+#detailTableParameters.table-hover > tbody > tr:hover {
+  background-color: #f1ffab !important;
+}
+
+    #date_recv {
+        border: 1px solid #e3e3e3;
+        padding: 4px;
+
+    }
+
+    blockquote.errors {
+        padding: 5px 10px;
+        border-left-color: #e9967a;
+        font-size: 18px;
+    }
+
+    .col-small {
+        padding: 0px 5px 0px 5px;
+    }
+
+
+    .ed {
+    font-weight: normal;
+    color: #e9967a;
+        font-size: 0.7em;
+}
+    
+
+    .axis path,
+    .axis line {
+      fill: none;
+      stroke: #000;
+      shape-rendering: crispEdges;
+    }
+
+
+
+    .line {
+      fill: none;
+      stroke: #8fbc8f; 
+      stroke-width: 1.2px;
+    }
+
+
+
+.dot {
+    fill: red;
+    -ms-opacity: 0.6;
+    opacity: 0.6;
+}
+
+.tick line{
+    opacity: 0.2;
+    stroke-width: 0.8px;
+    stroke-dasharray: 2 2;
+  }
+
+#warning_msg {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid red;
+    color: #dc143c;
+    font-size: 16px;
+    line-height: 1.1;
+    display: inline-block;
+    z-index: 4000;
+    text-align: center;
+    -ms-text-shadow: #90ee90 1px 0px 6px;
+    text-shadow: #90ee90 1px 0px 6px;
+    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.alert_{
+    position:fixed;
+    bottom:0px;
+    left:0px;
+    padding:3px;
+    margin:1px;
+    background-color:white;
+    color:black;
+    font-size:18px;
+    text-align:center;
+    z-index:21;    
+}
+
+.alert_.alarmDanger{
+    background-color:#e22923;
+    color:white;
+
+    -webkit-animation: blink 2s linear infinite; 
+	animation: blink 2s linear infinite; 
+}
+
+
+@-webkit-keyframes blink { 
+	0% { background-color: #e22923;}
+	50% { background-color: #fff; }
+	100% { background-color: #e22923; }
+}
+
+@keyframes blink {  
+	0% { background-color: #e22923;}
+	50% { background-color: #fff; }
+	100% { background-color: #e22923; }
+}
+
+
+#calculatedTable {
+    font-size: 16px;
+    font-family: monospace;
+    background-color:#fff;
+}
+
+#AmperageGraph{
+    overflow:visible;
+    background-color:#fff;
+}
+
+#calculatedTable tr td:last-child {
+    font-size: 22px;
+    font-weight: bold;
+    background-color: #f0e68c;
+}
+
+    @media (max-width:640px) {
+    .panelparam .huge {
+        
+        font-size: 20px;
+        
+        
+    }
+}

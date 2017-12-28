@@ -1,0 +1,192 @@
+﻿@{
+    ViewBag.Title = "Месячный отчет потребления";
+    Layout = "~/Views/Shared/MainLayout.cshtml";
+}
+
+@model List<PumpDb.ByHourStat>
+
+@section Css
+{
+    <style type="text/css">
+        body {
+            background-color: #d5d5d5;
+        }
+
+        #btnExport {
+            position: fixed;
+            top: 5px;
+            right: 5px;
+            z-index: 12;
+        }
+
+        @@media print {
+            #btnExport {
+                display: none;
+            }
+        }
+    </style>
+
+}
+
+@{
+    // выборка существующих значений энергии и воды сортировка по возрастанию суток
+    List<PumpDb.ByHourStat> energyDataExist = Model.Where(x => x.TotalEnergy.HasValue&&x.TotalEnergy>0).OrderBy(x => x.HourTime).ToList();
+    List<PumpDb.ByHourStat> waterDataExist = Model.Where(x => x.TotalWaterRate.HasValue&&x.TotalWaterRate>0).OrderBy(x => x.HourTime).ToList();
+
+    // берем расход как разность последнего и первого показания
+    double energyLose = energyDataExist.Count > 1 ? energyDataExist[energyDataExist.Count - 1].TotalEnergy.Value - energyDataExist[0].TotalEnergy.Value : 0;
+    TimeSpan energyDateRange = energyDataExist.Count > 1 ? energyDataExist[energyDataExist.Count - 1].RecvDate.Value.Subtract(energyDataExist[0].RecvDate.Value) : TimeSpan.FromMinutes(0);
+
+    double waterLose = waterDataExist.Count > 1 ? waterDataExist[waterDataExist.Count - 1].TotalWaterRate.Value - waterDataExist[0].TotalWaterRate.Value : 0;
+    TimeSpan waterDateRange = waterDataExist.Count > 1 ? waterDataExist[waterDataExist.Count - 1].RecvDate.Value.Subtract(waterDataExist[0].RecvDate.Value) : TimeSpan.FromMinutes(0);
+
+
+}
+
+<div style="width:21cm; margin: 0 auto;">
+    <table id="dataReport" class="table table-condensed table-bordered" style="width:100%; background-color:#fff; border:1px solid black">
+        <thead>
+            <tr>
+                <th colspan="6" style="text-align:center">
+                    <span style="font-weight:normal">Месячный посуточный отчет потребления по </span> @(ViewBag.ObjectName ?? "-")
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    Дата
+                </th>
+                <th>
+                    Время получения данных
+                </th>
+                <th>
+                    Показание счетчика электроэнергии, кВтч
+                </th>
+                <th>
+                    Расход за сут, кВтч
+                </th>
+                <th>
+                    Показания счетчика воды, м<sup>3</sup>
+                </th>
+                <th>
+                    Расход за сут, м<sup>3</sup>
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @for (int i = 0; i < Model.Count(); i++)
+            {
+                <tr>
+                    <td>
+                        @Model[i].HourTime.ToString("dd MMM yy г.")
+
+                    </td>
+                    <td>
+                        @if (Model[i].RecvDate.HasValue)
+                        {
+                            @Model[i].RecvDate.Value.ToString("dd.MM.yy HH:mm:ss")
+                        }
+                        else
+                        {
+                            <span class="text-muted">нет данных</span>
+                        }
+
+                    </td>
+                    <td>
+                        @if (Model[i].TotalEnergy.HasValue)
+                        {
+                            @Model[i].TotalEnergy.Value.ToString("0.##0")
+                        }
+                        else
+                        {
+                            <span class="text-muted">нет данных</span>
+                        }
+
+                    </td>
+                    <td>
+                        @if (i > 0)
+                        {
+                            if (Model[i].TotalEnergy.HasValue && Model[i - 1].TotalEnergy.HasValue && Model[i].TotalEnergy.Value > 0 && Model[i - 1].TotalEnergy.Value>0)
+                            {
+                                @((Model[i].TotalEnergy.Value - Model[i - 1].TotalEnergy.Value).ToString("0.##0"))
+                            }
+                            else
+                            {
+                                @:-
+                }
+                        }
+                        else
+                        {
+                            @:-
+            }
+                    </td>
+                    <td>
+                        @if (Model[i].TotalWaterRate.HasValue)
+                        {
+                            @Model[i].TotalWaterRate.Value.ToString("0.##0")
+                        }
+                        else
+                        {
+                            <span class="text-muted">нет данных</span>
+                        }
+
+                    </td>
+                    <td>
+                        @if (i > 0)
+                        {
+                            if (Model[i].TotalWaterRate.HasValue && Model[i - 1].TotalWaterRate.HasValue&&Model[i].TotalWaterRate.Value>0&&Model[i-1].TotalWaterRate.Value>0)
+                            {
+                                @((Model[i].TotalWaterRate.Value - Model[i - 1].TotalWaterRate.Value).ToString("0.##0"))
+                            }
+                            else
+                            {
+                                @:-
+                }
+                        }
+                        else
+                        {
+                            @:-
+            }
+                    </td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="6" style="text-align:center">
+                    <b>Суммарный расход</b>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align:center">
+                    <b>Электроэнерг, кВтч</b>
+                </td>
+                <td colspan="3" style="text-align:center">
+                    <b>Вода, м<sup>3</sup></b>
+                </td>
+            </tr>
+            <tr>
+
+                <td colspan="2" class="text-center">@energyLose.ToString("0.##0")</td>
+                <td>@energyDateRange.Days дн. @energyDateRange.Hours ч. @energyDateRange.Minutes мин.</td>
+
+                <td colspan="2" class="text-center">@waterLose.ToString("0.##0")</td>
+                <td>@waterDateRange.Days дн. @waterDateRange.Hours ч. @waterDateRange.Minutes мин.</td>
+            </tr>
+        </tfoot>
+
+    </table>
+</div>
+
+<button id="btnExport" class="btn btn-default" value="">Сохранить в Word</button>
+@section Scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btnExport").click(function () {
+                var htmltable = document.getElementById('dataReport');
+                var html = htmltable.outerHTML;
+                window.open('data:application/msword,' + '\uFEFF' + encodeURIComponent(html));
+            });
+        });
+    </script>
+}

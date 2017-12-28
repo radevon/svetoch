@@ -1,0 +1,20 @@
+﻿<h2>Оптимизация базы данных</h2>
+
+<table>
+    <tr>
+        <td>
+            @using (Ajax.BeginForm("DeleteData", "Admin", new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "AdminContainer", OnBegin = "showLoading(true);", OnComplete = "showLoading(false);" }))
+            {
+                <input type="number" name="monthAgo" value="3" required/>
+                <input type="submit" value="Удалить данные" title="Удаление данных за предыдущий период" class="btn btn-danger" />
+            }
+        </td>
+        <td>
+            @using (Ajax.BeginForm("Vacuum", "Admin", new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "AdminContainer", OnBegin = "showLoading(true);", OnComplete = "showLoading(false);" }))
+            {
+                <input type="submit" value="Vacuum" title="Сжатие файла базы данных" class="btn btn-danger" />
+            }
+        </td>
+    </tr>
+</table>
+
