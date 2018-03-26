@@ -466,11 +466,11 @@
                             <tbody>
                                 <tr data-ng-repeat="elem in EWdata.data">
                                     <td class="text-success" style="font-size:10px">{{ elem.RecvDate.toLocaleString('ru-RU',{day:'numeric', month:'numeric', year:'numeric', hour:'numeric', minute:'numeric', second:'numeric',timeZone:'Europe/Minsk'}) }}</td>
-                                    <td>{{ elem.TotalEnergy.toFixed(3) }}</td>
-                                    <td class="text-muted">+{{ EWdata.data.length>$index+1?(elem.TotalEnergy-EWdata.data[$index+1].TotalEnergy).toFixed(4):null }}</td>
+                                    <td title="{{elem.TotalEnergy}}">{{ elem.TotalEnergy.toFixed(3) }}</td>
+                                    <td class="text-muted">+{{ EWdata.data.length>$index+1?(elem.TotalEnergy-EWdata.data[$index+1].TotalEnergy).toFixed(5):null }}</td>
                                     <td>{{ elem.WaterEnergy.toFixed(3) }}</td>
-                                    <td title="{{elem.TotalWaterRate}}">{{ elem.WaterCalculated.toFixed(3) }}</td>
-                                    <td class="text-muted">+{{ EWdata.data.length>$index+1?(elem.WaterCalculated-EWdata.data[$index+1].WaterCalculated).toFixed(4):null }}</td>
+                                    <td title="{{elem.TotalWaterRate}}">{{ elem.WaterCalculated.toFixed(2) }}</td>
+                                    <td class="text-muted">+{{ EWdata.data.length>$index+1?(elem.WaterCalculated-EWdata.data[$index+1].WaterCalculated).toFixed(3):null }}</td>
                                     <td style="border-left:2px solid lightgray"><span data-ng-class="IclassLimit(elem.Amperage1,Ilimit)">{{ elem.Amperage1.toFixed(3) }}</span></td>
                                     <td><span data-ng-class="IclassLimit(elem.Amperage2,Ilimit)">{{ elem.Amperage2.toFixed(3) }}</span></td>
                                     <td><span data-ng-class="IclassLimit(elem.Amperage3,Ilimit)">{{ elem.Amperage3.toFixed(3) }}</span></td>

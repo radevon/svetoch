@@ -166,6 +166,28 @@
 
         $scope.updatedTime = null;
 
+        // вычисляю среднее значение показаний эл энергии
+        $scope.avgEnergy = function () {
+            if ($scope.EWdata.data.length == 0)
+                return 0;
+            var calculated = 0;
+            var count = 0;
+
+            for (var i = 0; i < $scope.EWdata.data.length; i++) {
+                if ($scope.EWdata.data[i].TotalEnergy > 0) {
+                    calculated += $scope.EWdata.data[i].TotalEnergy;
+                    count++;
+                }
+            }
+            if(count>0)
+            {
+                return calculated / count;
+            }else
+            {
+                return 0;
+            }
+        }
+
         // рассчиываю расход воды часовой на основе данных за посл 10 мин
         $scope.WaterByHour = function () {
             // интервал

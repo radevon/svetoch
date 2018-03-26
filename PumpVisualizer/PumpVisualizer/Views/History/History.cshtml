@@ -88,11 +88,11 @@
                 <tbody>
                     <tr data-ng-repeat="elem in EWdata.data">
                         <td class="text-success" style="font-size:10px">{{ elem.RecvDate.toLocaleString('ru-RU',{day:'numeric', month:'numeric', year:'numeric', hour:'numeric', minute:'numeric', second:'numeric',timeZone:'Europe/Minsk'}) }}</td>
-                        <td>{{ elem.TotalEnergy.toFixed(3) }}</td>
-                        <td class="text-muted">+{{ $index>0?(elem.TotalEnergy-EWdata.data[$index-1].TotalEnergy).toFixed(4):null }}</td>
-                        <td>{{ elem.WaterEnergy.toFixed(3) }}</td>
+                        <td title="{{elem.TotalEnergy}}">{{ elem.TotalEnergy.toFixed(4) }}</td>
+                        <td class="text-muted">+{{ $index>0?(elem.TotalEnergy-EWdata.data[$index-1].TotalEnergy).toFixed(5):null }}</td>
+                        <td title="{{elem.WaterEnergy}}">{{ elem.WaterEnergy.toFixed(3) }}</td>
                         <td title="{{elem.TotalWaterRate}}">{{ elem.WaterCalculated.toFixed(3) }}</td>
-                        <td class="text-muted">+{{ $index>0?(elem.WaterCalculated-EWdata.data[$index-1].WaterCalculated).toFixed(4):null }}</td>
+                        <td class="text-muted">+{{ $index>0?(elem.WaterCalculated-EWdata.data[$index-1].WaterCalculated).toFixed(3):null }}</td>
                         <td class="text-info">{{ elem.Amperage1.toFixed(3) }}</td>
                         <td class="text-info">{{ elem.Amperage2.toFixed(3) }}</td>
                         <td class="text-info">{{ elem.Amperage3.toFixed(3) }}</td>

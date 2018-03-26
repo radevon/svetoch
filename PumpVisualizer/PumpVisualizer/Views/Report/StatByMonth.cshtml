@@ -19,8 +19,15 @@
             z-index: 12;
         }
 
+        #btnBack {
+            position: fixed;
+            top: 5px;
+            left: 5px;
+            z-index: 12;
+        }
+
         @@media print {
-            #btnExport {
+            #btnExport, #btnBack {
                 display: none;
             }
         }
@@ -42,12 +49,13 @@
 
 
 }
+<a id="btnBack" href='@Url.Action("Index","Report")' class="btn btn-default">&larr; Назад</a>
 
 <div style="width:21cm; margin: 0 auto;">
     <table id="dataReport" class="table table-condensed table-bordered" style="width:100%; background-color:#fff; border:1px solid black">
         <thead>
             <tr>
-                <th colspan="6" style="text-align:center">
+                <th colspan="7" style="text-align:center">
                     <span style="font-weight:normal">Месячный посуточный отчет потребления по </span> @(ViewBag.ObjectName ?? "-")
                 </th>
             </tr>
@@ -69,6 +77,9 @@
                 </th>
                 <th>
                     Расход за сут, м<sup>3</sup>
+                </th>
+                <th>
+                    Уд расх в сутках, кВтч/м<sup>3</sup>
                 </th>
             </tr>
         </thead>
@@ -106,14 +117,14 @@
                     <td>
                         @if (i > 0)
                         {
-                            if (Model[i].TotalEnergy.HasValue && Model[i - 1].TotalEnergy.HasValue && Model[i].TotalEnergy.Value > 0 && Model[i - 1].TotalEnergy.Value>0)
+                            if (Model[i].TotalEnergy.HasValue && Model[i - 1].TotalEnergy.HasValue && Model[i].TotalEnergy.Value >= 0 && Model[i - 1].TotalEnergy.Value>=0)
                             {
                                 @((Model[i].TotalEnergy.Value - Model[i - 1].TotalEnergy.Value).ToString("0.##0"))
                             }
                             else
                             {
                                 @:-
-                }
+                            }
                         }
                         else
                         {
@@ -134,9 +145,45 @@
                     <td>
                         @if (i > 0)
                         {
-                            if (Model[i].TotalWaterRate.HasValue && Model[i - 1].TotalWaterRate.HasValue&&Model[i].TotalWaterRate.Value>0&&Model[i-1].TotalWaterRate.Value>0)
+                            if (Model[i].TotalWaterRate.HasValue && Model[i - 1].TotalWaterRate.HasValue&&Model[i].TotalWaterRate.Value>=0&&Model[i-1].TotalWaterRate.Value>=0)
                             {
                                 @((Model[i].TotalWaterRate.Value - Model[i - 1].TotalWaterRate.Value).ToString("0.##0"))
+                            }
+                            else
+                            {
+                                @:-
+                            }
+                        }
+                        else
+                        {
+                            @:-
+            }
+                    </td>
+                    <td>
+                        @if (i > 0)
+                        {
+                            // если есть энергия
+                            if (Model[i].TotalEnergy.HasValue && Model[i - 1].TotalEnergy.HasValue && Model[i].TotalEnergy.Value >= 0 && Model[i - 1].TotalEnergy.Value >= 0)
+                            {
+                                double energy = Model[i].TotalEnergy.Value - Model[i - 1].TotalEnergy.Value;
+
+                                // если есть вода
+                                if (Model[i].TotalWaterRate.HasValue && Model[i - 1].TotalWaterRate.HasValue && Model[i].TotalWaterRate.Value >= 0 && Model[i - 1].TotalWaterRate.Value >= 0)
+                                {
+                                    double water = Model[i].TotalWaterRate.Value - Model[i - 1].TotalWaterRate.Value;
+                                    if (water == 0)
+                                    {
+                                        @:∞
+                                        }
+                                    else
+                                    {
+                                        @((energy / water).ToString("0.0###"))
+                                    }
+                                }
+                                else
+                                {
+                                    @:-
+                                    }
                             }
                             else
                             {
@@ -153,7 +200,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <td colspan="6" style="text-align:center">
+                <td colspan="7" style="text-align:center">
                     <b>Суммарный расход</b>
                 </td>
             </tr>
@@ -164,6 +211,7 @@
                 <td colspan="3" style="text-align:center">
                     <b>Вода, м<sup>3</sup></b>
                 </td>
+                <td></td>
             </tr>
             <tr>
 
@@ -172,6 +220,7 @@
 
                 <td colspan="2" class="text-center">@waterLose.ToString("0.##0")</td>
                 <td>@waterDateRange.Days дн. @waterDateRange.Hours ч. @waterDateRange.Minutes мин.</td>
+                <td></td>
             </tr>
         </tfoot>
 

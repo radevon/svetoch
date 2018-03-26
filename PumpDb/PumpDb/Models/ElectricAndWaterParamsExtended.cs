@@ -27,7 +27,7 @@ namespace PumpDb.Models
             }
         }
 
-        // Отношение расхода электроэнергии к воде
+        // Отношение показаний электроэнергии к воде  кв.ч/м3
         [JsonProperty("en2wt")]
         public double WaterEnergy
         {

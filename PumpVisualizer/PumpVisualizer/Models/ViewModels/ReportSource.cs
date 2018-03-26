@@ -11,7 +11,7 @@ namespace PumpVisualizer
     {
         public ReportSource()
         {
-            
+            DateParam = DateTime.Now;
         }
      
 
