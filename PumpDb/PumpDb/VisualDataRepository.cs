@@ -215,6 +215,7 @@ namespace PumpDb
 
         #region Statistic
 
+        /*
         public IEnumerable<ByHourStat> GetStatByHour(DateTime day, string identity)
         {
             IEnumerable<ByHourStat> parameters = Enumerable.Empty<ByHourStat>();
@@ -227,6 +228,41 @@ namespace PumpDb
 ) select dates.date as HourTime, params.recvDate, params.TotalEnergy, ifnull((select waterStartValue from waterKoefs where identity=@identity_),0)+ params.TotalWaterRate*ifnull((select waterKoef from waterKoefs where identity=@identity_),1) as TotalWaterRate  from dates
 left join 
 (select par.recvDate, par.TotalEnergy, par.TotalWaterRate from electricandwaterparams par where par.identity=@identity_) params on params.recvDate=(select min(e.recvDate) from electricandwaterparams e where e.identity=@identity_ and e.recvDate>=dates.date and e.recvDate<datetime(dates.date,'+1 hour') and (e.TotalEnergy>0 or e.TotalWaterRate>0)) order by dates.date";
+
+            using (IDbConnection conn = new SQLiteConnection(this.db_.GetDefaultConnectionString()))
+            {
+                parameters = conn.Query<ByHourStat>(sqlstring, new { identity_ = identity, day_ = day.ToString("yyyy-MM-dd HH:mm:ss") });
+            }
+            return parameters;
+        }
+        */
+
+        public IEnumerable<ByHourStat> GetStatByHour(DateTime day, string identity)
+        {
+            IEnumerable<ByHourStat> parameters = Enumerable.Empty<ByHourStat>();
+            string sqlstring = @"WITH RECURSIVE dates(date) AS (
+  VALUES(@day_)
+  UNION ALL
+  SELECT datetime(date, '+1 hour')
+  FROM dates
+  WHERE date < datetime(@day_,'+1 day')
+) 
+select dates.date as HourTime,
+	   energy.recvDate as recvDateEnergy,
+	   energy.TotalEnergy,
+	   water.recvDate as recvDateWater,
+	   ifnull((select waterStartValue from waterKoefs where identity=@identity_),0)+ water.TotalWaterRate*ifnull((select waterKoef from waterKoefs where identity=@identity_),1) as TotalWaterRate
+	   
+	   from dates
+	   left join 
+            (select par.recvDate, par.TotalEnergy from electricandwaterparams par where par.identity=@identity_ and par.TotalEnergy>0) energy 
+	   on energy.recvDate=(select min(e.recvDate) from electricandwaterparams e where e.identity=@identity_ and e.recvDate>=dates.date and e.recvDate<datetime(dates.date,'+1 hour') and e.TotalEnergy>0) 
+	   
+	   left join 
+            (select par.recvDate, par.TotalWaterRate from electricandwaterparams par where par.identity=@identity_ and par.TotalWaterRate>0) water 
+	   on water.recvDate=(select min(e.recvDate) from electricandwaterparams e where e.identity=@identity_ and e.recvDate>=dates.date and e.recvDate<datetime(dates.date,'+1 hour') and e.TotalWaterRate>0) 
+	   
+	   order by dates.date";
 
             using (IDbConnection conn = new SQLiteConnection(this.db_.GetDefaultConnectionString()))
             {

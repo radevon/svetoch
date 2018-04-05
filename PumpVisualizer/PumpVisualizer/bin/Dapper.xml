@@ -1139,70 +1139,341 @@
             </summary>
             <typeparam name="TFirst"></typeparam>
             <typeparam name="TSecond"></typeparam>
-            <typeparam nme="TThiúF"´¶ty‹RCra|(¨›¨ ¨ ›¨Î¨Š´VyéepœCô ÄmíÓ"gìodPthªX</tÂéüp­œËÇ¶
-¨ ¹ ¹F  ß–¸ÓpVéaëéåÎËÖí—DºÎfí¤ˆ…‡…¸µøGÚérË°”ãÆŠŠ ¨ı¨F¨›¹<tµø¸øËúpô¨pÇÓ vèÒ¸ñ">¥ühÚGøéram/õF›uFd ŠÎŠ¹–Ï[Ë!4éúa1C^ŞhfEqíŞL!Â™zKIíÓC!aËACƒò‚WŠÎìÎ1¹F¨WŠ-t4íø%ë­ƒFÄp|í=DvRíGWr*D¶Z/¸†íøR¯a¡>§±¹ ìFÎı¨ı¹ŠF–Ër­mŠÕ­OtÓîP*L"…kpé6Ëzk}ŠŠFÎ ßì´ø­P¡ ‘Ë^íµs 3>¥òRËC|>¶( u¨Š  dŠ ›ÎÃ4¾p|Š€ƒe—ª8Rø™Z§éØ%^/XÆu¨ŠdÎ¨  WŠ´Cp¾åd¢ÖŞJ»Ré)ã‡4éú­’ò>‚1WÎŠìß¨ìuÎğ¼ËëËƒ¢¼)ü—ÌšëC;ûøí-ç"z-…ééœ|X9›Îı¹¹¨ì ŠuZarm name="êWfDíëedDĞpacCm…±¨ ¨ ›¨Î¨Š¨<éarƒ÷aÇ=ªp_Ãt^L">´IparÚô§ÆÎŠŠ¨  ¨ ¹ ¹ZpCrC’Š¢ËmV¤"úçåƒpÄßÜÃ‹çt»ò–”ËË¾­å§‚ ŠıŠÎìŠŠ ¨áøúÚô n­å¸µˆë~ôåÎ2—RG™…Zãéarø^¶ ¨¨   1 ßF›iG0uØ€Ù§–”PŞ01úæsI›ud1¨K”O0ÇÙ!X” d1ŠÎì-åÇŒ©œ1÷åˆ\:"%øø!ëâ½Æ\pøpP.ÙFGr=èW(Ÿ†üí^óD­tË•ĞD®%L³í¾íÃ	Ä—$y¿tÏÖâqeœ¥]#SÂQ0eåjş4,n†ù[šeOÑuF¢ëóŸ[¸e’„|êâVc—L,ù½×[qhsÏGmêÀec0†SÂ‹!ƒâUpŞÀ§DÈÜ'RæÈCüçÄh`h&¸0å„M_ían[ùñ@e©’¦¸œÒÕµqñ‹!^óõF(äé®“©HÛhšGÇâz‘üÿg“àŸÓêŞ‹^â“1õÆŒõG.Ûàí!å?D%eË·Ë|C;Wï—C¸ä°ªò uFß  ß     <suåOaPñ§
-FÎ  1 ¨›ØeúDoÉåÎéŠåWlíi ƒRéiÄ ù›eAÓ fKth¨rbiÏëørµÎÃÄøut¨RaëaôtGrQò ìŠ ¹ ¹¨¨Î1Š‡§Ùƒåràò§±›Šìì¨Š¨ ŠıŠÒ¸[CÏÚaú¼åFæÚôe=îÜíŞıc÷ªXEÂÎPGÏÎ¢¹tyéV´>Ş[øíparpmÁk±uFd ŠÎŠ¹Š›Ë%6éå p|G™6* ¶K”R4ØÚ)Ik“Šd1ŠÎì1¨W–­œpôFæOÏ,"5äªz¥ãØp|¶l ¨ dF¨F ìÃéúR° ¢aÇŞ¤"¸G®ªãøØËÂWoª ŞÂ¼GbÎ¥]dVhŞ6eë+ØdG–…RœaOÁ>9ì¨¨ìWì ßŠ¨´Ca­| ÷¼OÏJ |aË >zøËra)”±ÎßdÎì11ŠÎÎÎ –ø4AéÖéí—fCp'­8ª”xRúamI§‚1ìß¨dìÎ››W¹ø%^ıÕR)íµî‹¾RæbVÃ£]İ¶ğz­¾Ëô”ã9ìıd¹ŠÎÎ¹u¨¹Zé%úpmdËôíÓUsW3UŞœV¹»§´ãpË'CÁ
-ß        ¨ øøraÎLCme, sRäÒüOæ >ïà‹¨ìáGlı w‹ÎQñoß
-d¨p_Ãt1Cnd¨ead›íñeìÏÉçnd¨Mbóeú DrM’ŠäÎeUøuõü²ÎxÎ’´…úm§Á ››Šìì¨Š¨ Šı–­PRÇŠné°í[ªØömm­æ¹ÜÃåtöı3”(›O@ŞÉF£ÿ süPçÎQ¨êefoceßÔO8L  Ï–ÏúßÏKÔ*düám~dV”%%cCåI¶(uŠ›dWF¹Šd1ŠR¾påWÄ¡‹,»çOËd2=øíf§…FÃe1é VoúVF 4ç £Îé¨Q¼t¯h•‡¶p­Oã…×¹ŠFŠ›W ì Š›ìc‹¸F6Ls…krí0ß*I> ŠFÎ ßãåí¡@¾>ò ¨¨ Fì1<ô¸OÈP1nÚOewÅDa4ÚeÉÀ¬5‚paÚ‹œÀRÏé1pàÚPNÛûŞ!^?®?íÉ0Ì…
- WŠ¨1ìß¨dìÎ‡ÈôOé†z>×›d¨¨ìßì¨1W§LŞ©A‘é u›¿©ŠöÄ‚JÁ×d¹ŠÎÎ¹u¨¹F¹x§bu)|ËëñĞzu›Îı¹¹¨ì –%Cm ‘ame="valıG"´¶paO
-1 ¨›¨ ¨ ›´œíŞıPnê><ÁœGíuØs¶ã
-Š 1  ¨Z/meÖûüròã Š¨  ¨ ¹<ôm@ePßÄ­Çe»M£ÌéaÏÉ¦ù‚Åpé©Ø•éÏ­¨ÆWÆäaÈ±Ï­¤CA‚ùyû©í¦ôûje¯üôª”…¹¨F1ŠFÎ››FğêumôRúh”/‚¨   1 ßF›uFk*tÏœÄøÆ›WÈ!dçæl›ud1¨W›u–”7ôËA=/§9Îì1¨WŠÎğÁ|üêP”
-Fd¨¨d¹ìÎZÇt|êené^G=f+²"a¼‹ú¦`¬laÚËürâ ‡L¹Ç¯ØÎúÚa¡eŞŞ¾
-B—¿G!O.ÿC0a¦î0'RØËOšeP¼\_ íë¸K¢,¬Ó@üí^."­ea·”fÈ4M|mÚLdñÙte)„SÏœ–*‰å3/§äÎÎ Š¨u¨›F¨Kûß)^p'µk… dÎ¨  WŠ¨1…‘ü!¾€Ú×WìQíF*_¤¶9d¨¨ìßì¨1WÎ–ã@Šå¡4œµò§“ŠÎìıd¹ŠÒÁôG8êü§I‚1 d1Š¹¨ÎK|G8QŞœ³øôíñ"çofpe.SqlMappíP.réúkLVrarpOeVíÉû(Û[sÏíƒ¦îéVa·IDŒ­MômËd¤½y@Şe|Stúng,èàêt©ƒ„åêjeëV)»>”l  ßŠìŠ ¹ ¥ûıƒ|ËÉñ”kä¨W ¹ìŠ››Šìì¨kÄüeØ³Ë‚ìW@ÏŠoæ±ñk‚›¹  ì¨ı¨Š¨1¹´IbßƒCPÂ…kÆ¹  ¹¨1Š§åembtrÁk±uFd ŠÎ–ôÏÖ@Ş6dæém,3o	ÿ44aGúYèS9çÚ4ë„`%ÃGK”©AéËƒ©štë0éWÏ9S7üí)·ƒŒÏre¡"X/
-¨ dF¨F ìßÎ´ûF°m­rÓ…”
-ìFÎı¨ı¹ŠFŠ›8BŸOæş˜g+ÎŠ\6iÕV!ræ%ÆW1TÏŠM‚yß`R¢áü¥X¿ ‹ÂV¨øRr¡eeëıTËWt ÌKtJuøØop!Ø Ï—!Î¯pbŞ‡€‰.§‚u¨›F¨W¨Šd-z¿ åÇ%P—…
- WŠ¨1ìß´k¡‹ÖÙë…lßdı›d¨´¡š¡QícW€CÇ©İÅö¼¼Ïë„½B %éÚ‹œ·p0øõú!Äxt!cËõûÆ3pR%VÉÀ`¬õÔé¼pÏ'/¯armeterLooãWpÛàstƒfatpIfêøçmåCnß¡Ì¶§‚ ¹  ÎÎ¹ ŠF<û›m^Ërh
-¨F   ›¹¹ ìÎŠøípléAe¹aõ
- NiVšØ­Æ GöküæûÎfÃÏàŠ†ír¹¸ÏÃÏŠª£úO§‚ ŠıŠÎìŠŠ ¨á§ıÖôarµ¶Ğ‚Š¨1¹¨F1ŠZÁOGÖÙ¾§
-¹¨1Š¨¨<me|bš›L4Gy"çÔîøÚËGÉjùäMaaGA•+cOé“q,ÙÏ!HÖÈY!rŞ ĞÁ¨WŠÎìÎ1¹F¨W–bu)éú=§ÁäFŠ11¨ F ¨C+şr¸ß€ıåV¯i¯ ÜÚõu©ÎV²¨©ñÏØ›t¾iÄÜìD~œ¡"Mr›qL¨(Ã!_ŠÚWoQš@>Æ¨¨ìWì ßŠ¨¨/¹|mø¯[”z(1 › u¨–/m!ÇbŞœÁIäì11ŠÎÎÎ –å0^êŞPFæåÏy\oˆ4øÚ!PÀ`ùlMÚøVcâ¼ú!­šŞëëCå/‘"\šŞ]!úé¸¾ÌpGØâ`ä4¼©Ø·ãŠV¢©-íÓÂ½àQ!íôHÛ+ç}e%†ÊñtO{qÔ_¸ø÷¡î>§_Fß  ß      <sıOmCúà>lÎ  1 ¨›¨IæVeÉæäŠıQe¹on‚—/“ ŠF ¨Î Š 1</ûmmaÉà§ÆÎŠŠ¨  ¨<¶mübGrò ìŠ ¹ ¹¨´ƒtÇÙíØF€ée¤îìÿË¼¼íP„ÛqÆË¼GA„şyø¸Åøëëov¥ì¸úˆ¶“¨F1ŠFÎ››Fì¥suô^écÓ…‚   1 ßF›uFeŞŠíÓËG–)%ø¨fc1V[Şu#xTí›V,ÚŞI}F¹Šd1ŠÎì1´XÙ›¡ƒpë¶z(Š1 Fd¨¨d¹ìÎF–ctüuLs¶g[p!Fåpì–€ûüR³c©,Šßüf­‚Vıá®¹Ş	ŠØe­tÏ›¢GfÎ¥]7VaÕA! ç"Š3! FÆŞveoCãúí¸W¢sÁ§9¨¨ Fì1 ¥òOÏ@tr…/
-u¨Š  dŠ<Ö‹’&‹¾1Ëƒ‹Ó"ç²RøËG¦$ùÆ	Ra%©'¦í!VºJøeMÚ `h¿‹í)âºÂË° ¶kõdı›d¨¨ìßì´bƒOË¾JÁ…ÆuÎììŠ¹ŠÎìıdŞÏš¹V,øüKô%ø1f+cŠíà‹WvK#VÕÎG¤éü…Æ ŠuFß  ß   </sumåCr[¶”
- FÎ  1 ¨‡úeüWrÕûĞÜÓøG ôapÎ‡OélÏeæšaGÃo Dí aulÏÍàp©£ËÚ¨inûVa÷cüFiD LŠ£ÜeAëiıí¨cÏÈíÄÒ§eí¹ØÕÈ”ÁÆ¨Š¨ ŠıŠÒãOVÇÈeúã…l¨›¹  ì¨ı´Çí|ûí1ÄƒG™ö\ˆøppüA¦BÛNÅéppec.¬Ïv,G	aÚÆùàÙÏGÖjñøe[UpRCŞ'jBSä:ÚR%ÏÉj>2àÚV	pÚ ĞÁ¨WŠÎìÎ1¹F¨W–bu)éú=§ÁäFŠ11¨ F ¨S!¨u¿‹å¨^¼p¼iÄÜ¹f£ÎV¤ø¸¹ÎÙŞi­lÃÁ©PbãÆd ›d ¨dŠWxIFÇÇC—>/õì¨¨ìWì ßŠøéAaìaô¸ˆ[ae™EL!áŞy 0ÓpŞÎ‹+Î£gtØœ‡Še–§%RúÚOX…}¨Šd1uìu¨ŠdÒCéraŠæR|©Âª)­™…:øRø‘#¯Î_!û¨¥’¼VåtšCŞ¥\‘¤ì;›  ŠíÅÎA©°+ïÏÎìQ!çôFô%ø-/4pØøåĞzu›Îı¹¥§¡eÇ7GÁ
-ß       <åGm@íë nƒG"M+faRøŞú.ÛSlöéøÏúGütT—GİeÙrálZĞec
-Syûem.ïàéeà½ÓÙüem¦faía·/DCtC­Ï­ÎeAµSàûü‹|„òæŞUÜ¤$yê¸ÏÖ•ã¢¸»†ÛyÙ©Ïƒâ`\ÅÆeé³¡D¶¶“  ì¨ı¨Š¨1¹¨F-ÙƒOCÉÂXÁ“  ¹¨1Š¨¨  ItšÕC9FW7eŠÄõÓ¶(›dd¨¨ W11›ikbWåÚP,”¶NWF¹Šd1ŠÎì-øØ¡ÎøíJ Şhpf¶´ké­œÇ/‚ F ¨ dF¨F<¼œéå³a¡e—™ëe­‹Pÿ¶á¶ÚØÚ>Á
-Š›ì1Îìd ›4aú%ÇW*V—ˆQrV½\F¢ìªòX¼aË^¶…9 Fì1 ¹ıŠW1<ËCrC8¨Äam!—"×‹‘#š¤3/–ÁrËåk>‚›F¨W¨Šd1uìiøË6Cƒæam—ªAt¸Šú*‚›××>ÿdáŒ0~´È@-æïîÁğøpO”Á9ß¨ìuÎììŠ¹ŠÎğ¯!íßœ€êi§ëí1úsz ¹¨ÎW1u‡Á^¸ôûí¾>§_Fß  ß  <membeúnCåü="+ÔfCpptP.qù×ÅaøReÉ¦ºàØçUDøta«–AüpŞoæÆSJÙttO.EğeptÒö÷,Ÿ—ÙŞím.ÁLtª2µ5yQtG’„ˆËtR·IİéüCÏÚìÏÂÛsí©Ç•ôÈ¦©ëVƒª>§×ŠÎìŠŠ ¨ı¨F´Èìmm­ú¤¶§‚1¹¨F1ŠFÎ››2¤ëowêé1ÎCüé exreÒM;J+nÆ—ŠìÙŞF›-*üírp}NJ¶_d1¨W›uŠ›dWZ¶ÙF)|ËA[ĞÁ¨WŠÎìÎ1¹Z§GÇsez…‚d¹ìÎFŠ11´mObíAn%í["œÅªéøC¸râSÛ×Ôa¼‹PóË²÷ÄÉÏo¢SŞÉ¥Lv­£^4CrŞPf>…NŠWdFWŠŠFÎ ŒF^¡éúµzÆ ßŠ¨¨ Fì1 Ñ²UŠJ~u×F A:æÄec0ÃoÕÎŒ0œ¥vÙÎŒ‹ Éç8CéÉG¨çØdV` ¥#éÆ!LV· DÌéF}¸Œ¨0£ÎèÏğLï%)C¼ÉV6¦Ç¾›¥]é}Yã(Šìß¨ìuÎììŠ¹úœ\º´ ğÄ‰Îø6ıêö)¨xm4}Ïôí€pV<\ÕÎP¼÷¹ê© ß&G Šl ™or allowáLgåìltÃVGnaAyìÚüaêCsŞûÎÿÃüJ ğde€šKúaÆk
-¨Î Š 1  ¨FschŞôø ¸ŠÙàarísírøeEiGŒ„ìäoGü íàéš1ßÈıË
-ÎíuğºË×ŞÄ¯©¨PßäeÙıË¼NJŠaæ¤¨ùÎğva í³üŠë~÷ærŞLÈÏ¥÷gs”9¨1Š¨¨   1 ßZÙ3q<…Œ”¹ÓÒG× düàeWbpOV›=%bJ¥ÔF0„¶NWF¹Šd1ŠÎì-§ßƒ¡càX…}Š1 Fd¨¨x¶¡‹Ètc¶l ¨ dF´e¡‹ú¨]¼m©=ˆı£D­G¯¦èÆ+ËËe¾.îÚ¸CE®_!vyËG
-aå!á=DI> ŠFÎ ßì¨¨ğQ¡mØJ¶…9 Fì1 ¹ıŠW1KŞ[ W&íÎ t+ŠiÕŠ–'¸t1Ş†‹ÎtÓø0æÚO¨ûÙ+Px4¸0ìŠ3Kš[¨a 3ËüRE­ä!Áä››W¹¨Fßdı›kûı¡’­Añ/zäŠìß¨ìuÒã¡ÏôÈ‹AòĞN¹ŠÎÎ¹u¨¥ü)êtrdËôíÓU\RËV¯·Êù MË%R.AŒTableValıGdréëamšGP(ShQtGå•ÌaüC.ÿéšéşé@lü,S—Vüm„5tú‡nTƒ"//
- ¨F   ›¹¹ ìÎ–ÙımméPy§“F  ßŠìŠ ¹UêíìÎeÅ›øË¨ İ­ŞÚïË® íËû Ëış®NVüËlı¸ì6éÉøme¸í¯… ¨1¹¨F1ŠFÎ›‡I¿ìmmøAñ/§(¨¨   1 ßZ”O0@!r”ã ¹Š››dd¨´m|sGA›;%|GµUöËË4·ùB(\ËCR‹¾?ÛŞºµt×å
-ùhs!å¦ ø¸HîpeéT@líqy7í.Ÿ‹œáæTô"ò ›¹ ìFÎı¨ı¹ŠZÙÎm­rÓ…Á(1Îìd ›d ¨Ù+RŞÏÎDC‹Rg­êä© ¥t—ŠR¨üJpìaô¸/ W1 › u¨Š <kÙuÖƒ6—òŠÎÎÎ Š¨u§ÖGêú”I91uìu¨ŠdÒ^ímbØ¨]p¡šµfÔÿÚéGúH¬5_ÚC4íúâ¸©GÜh‹lË¡V×Ûµ&š©¡„İËšRâ™%íËºûN0¡»X”N¨1 d1Š¹¨ÎW1i@Îƒ^¼ëà¶Á
-ŠuFß  ß    FetcàtJí¹ty‹LamtaQûÔëiéVeß¨™áŞàa¹DašvøbÆ‚Î Š 1  ¨F </Èìôm­œÓ”…
- ¨ ¹ ¹F<mG’È©Ø>>“ ¹¨¨Î1Š›´Çƒêr¹¢ËÖŞ—î²fËøpÏ¯„½½N~ËÚpí¯¦'ûïøbl©Ş¼äßíuÉépÇšGP“è¿íem·pç}ÆGëüionb.¸ÕG'AjIï€ßôÏÉCÙ(!óÅic~Q\İ!jBSä$ŞP#ÏÉj$ëÜV6?ùBNª­eé%Ï£œuäJÛQŞtmHüú-÷«ÇD”¨ F ¨ dF¨Zs¹’ƒéúJãÆ Š›¹ ìFÎı¨ıÌÙÎ›oìpËÈ¿pÎ…v*WmŞP%bä!Œ0]$BÆîCRGœ\A¨®ï¸W­sßËÜéQlšplì¸FúPpmŞVePX‚Š  dŠ ›ÎßdÎì->Ù›ƒƒaØñk>‚›F¨W¨Šd>8©8êÏ6ã9¨  WŠ¨1ğ’í)®‹É›øOí[İ	™ÚC4íúâ¬½_ÅpGØâwæ¸¼î”” Îìıd¹ŠÎÎ¹u´êô)écyz ¹¨ÎW1u›Îıİìå¡yŠ![š fr excludáLgîëomFƒWNti<OaR…±¨ ¨ ›¨Î¨Š¨<¶suƒƒCëy”k
-¨Î Š 1</åmbeÉ§”
-ìÎŠŠ¨  ¨mümûrnC’ÏñˆT	İaéøíœ?ùÊäçør·‹ØÒßø©­ìGØª>§×ŠÎìŠŠ ¨ı¨F´Èìmm­ú¤¶§‚1¹¨F1ŠFÎ››2¤ü gëZì1ØGéìer arÒF0-nŞ‹ØÿËØGÈd"çú tpFZÕ2d|WäÒR9Ï›6ìÆGdbÏGQÎªcçŠìªpéíÛde=…‚d¹ìÎFŠ11¨ F<§@Wm)ú>ÁõÎ¨¨ı ì –”ôe¡‹Pã…×¹ŠFŠ›W ì<ÇŞ¡@tœì]%Oe† 	:Ì%Ú!Y`ÛÆopGt¾áìG¨e„aíéWAµc±[ÙG|.ùMoN0éÄ)"z§
-›ÎßdÎì11ŠÎÎÎ<Ùı8^éÉ[X…}¨Šd1uìu¨Šd¼Véd Âí©‡üd«œÒßWöD¨š7F±Ï@h¨ú©‹¹AætÎCÙìRßìµ;¡¥É¹ÅŒY©¾0” ÎÎ¹u¨¹F¹d¨1<kbßôåhX9›Îı¹¹¨ì ŠuZemrks>Note²eCëñ r	™Aan1@eéØëeûQeß¨˜áË¨ dànaƒ‡A»,Š	r¨ŒyÉabVinïFto Ú÷¹Iˆ‡ÉŞáonéPy¿lí]sVrK‘ÍàÅbYücí®ïš*–”úÏús§Á ››Šìì¨Š´/Ç¸ÇŒ©P§  ¨ı¨F¨›¹<m©å¿íØ¨øå,ˆ+ÔfCËË¾·Sqõ~éaÚGú¦GriuRšßG'Hp!aÎ¨ÃëÙÏcÈ=*ëª>z1›ud1¨W›iÙÎ)ëÓIŠÎì1¨WŠÎìÎCüìWCÄ1i áş-ı¹
-Šc~ÿ 	D ü[G *ğ «‡ì¨\» ¾eÙÎõt¿JÎP¸ü¨ëÄÎ›sìaŠßµLpƒ¥PdMbÑG't…NŠWdFWŠŠFÎ Ğ@F¡åé¾[IÁ
-ßŠ¨¨ Fì1 ¹áPÏCckÈNM!í t,Ï Éˆd­1È‹ÎcÉí&@íßá¨ˆ J4¡<ëˆhA¨byWÉé@e¥‘ïd¸›Ú¹kÌœ0Z²ÕR6ñ® ‹÷@üc€E†£Q•í¯!È«¸‘¥…œV¡¼6òÙĞã“u¨¹F¹d¨-/)tÇûíœI(u›Îı¹¹´¡eÇ7Gßna’e="M:DapøGrÛèlMRGr.VPiFÚŞédíP.éíììáPsíOrª‹DøuÆAû—nPˆ>(  ¨F   ›¹¹ ìÒÙßåmaú[>”
-¹F  ßŠìŠ Ëeøì¨ŠÒæÎ˜áuø ŠÉÔİì£îŞàeŠ³Ï–¸TØÃd¨²îFúŞêul¸ûñ¨ØíeìútÎFQÚ›µ÷amğP¨~ÈHíët
-1 ßF›uFd ŠÒ…êßÖOÚ6=¶…
-W11›ud1¨W‡P0ÇÚ6§ä\0tV†©1úİÎ¯¹íWCÉre7íìdï¥FˆuhæaKcªo6Fê ¯üá]º ¸oŠÚ÷ …"‡A©á²÷ËÓt÷sŞÉ¥LvÂ£Q.GcÏ#t³x…!AÁÙkä ßì¨¨ğ©mÏA¶…9 Fì1 ¹ı–G|bŞP L4åÏ="	DÚ!œâB`Æ£pÏú{túÒF4íìÏ6C0­1ÛÃ*E‚VÉsyÉªÆß¨dìÎ››W¹¨FÃ7F°ÖR6ñ¶Áõì¨1WÎŠìß¨0¨ìË÷Š‡]¨´2ğÎ›õ'çîFö"¨eh!1ÄüğšWvP<W›Uıëüû¹lŞ&FetŠrned as éd[æømiÎM@jerV(¨›¨ ¨ ›¨Î¨Š´sìmmœ[§ F ¨Î Š 1  ´emaÉòê>‚ŞÏ² tàG ëoîFcCnÏìËcPüsêíìÎgÃÚ¨ˆ—æmğ¯ˆ—›Å¾ìê[ŠëaÙ©Ã€«GÅŠaæıÁ"áØíio¢é¯ñŒäe¢ûcÃ‰MÙÑ¯í&gí´>ØGåérks/õF›uFd –ÁÇüÇÙGÉzI‚¨ W11›i)tOêÉ;ËÖ!JDÔw%aÚVPÀŸ`ä:Ë¼‹c·!úFøta!ú¦ü­Š5Ãväe)PDíUCu(Éy¢œÌ¶…9ı ì Š›¹ ìFÎáû¨ôÇØÂIÆ Š›ì1Îìd éG%d¨%ÄW-ZÜÃFl\DìçîìV© ‘ÏKü¨Tr¨1oÿıPÏW}tÈ P0üßrn!Î Úß%Î¨hËƒ‡ Åê?VëÏ/l¨W¨Šd1uìu¨ŠxFåmaÓ¶>ìß¨dìÎ››W¹¨Z!^¼ÉX7¶Æ£‹©	¨e‹Ø£Dßë­;Î®©ŠøÉV¿®!ıŠ˜‡øwìàø)ár"h1Åë¨Œ1A4@Ï‡]º¹íçìaÄuk"–ct–onary&lt³QtPá÷g,	ŒHGct7Et´”úeåCrĞûĞ… ¨ ¹  ÎÎ¶mÏbíœ>>  1  ¨F <mŞôûe¾ÎÄËåe=ªo:İaéeP.qÆËpCür·Ïú‡uøŞéÎœ¦%eø¨ëÈÂÄ¯äÛ[ÙüeÇóş—¼GùÓsü¸åHÊÔöle­æôª”…¹¨F1ŠFÎ››FğêumôRúh”/‚¨   1 ßF›uFp!aÎÎŞñÏ›LŞ<0¨ïru1MU›'!bWäÈ/_Š›dWF¹Šd1ŠÁ¿dåËœµĞ“F¨WŠ1 Fx§å!ô®‹”¨ F ¨<)åe¾ß€éåVà":îÚép©Àq¬äøÚÏÉYG¾iÎé©Cu‹¾Gaßd-rû0ë=ùÓQ‹m«JC©¡ªò/}ì ßŠ¨¨ Fì1<ê¨OÇPh>¶( u¨Š  dŠ ›Î­!¨1pÄÎ‡€dÃş<WıÚNFúÿŠ+U1!¤0¨Ä!ZšïriŠçU1¾šû1 šÈ¶}¹¨Fßdı›d¨´ãŒ¹^åp—§Æß¨ìuÎìì–¶Ç‹^®¸6§§äÎ¹u¨¹F¹xåtm&tØ¹ætw~ªR­éüúâSÛ9ope.GridReaìGrÚüad ‡PQtOcfeDéÎätÉQyÕëÆÛÓûVeô.T—G°"”k
-¨Î Š 1  ¨F<suÖôørµĞ§ ¨  ¨ ¹ ¹F RGÎìËnğnıáş‡ußÚäŠÿWoÿìŞÓŞŠ¢©ğVŠïrÃ¹ŠªAÏÙuä©ûk‚›¹  ì¨ı¨Š¨1¹´IbßƒCPÂ…kÆ¹  ¹¨1Š§åembtrÁk±uFd ŠÎ–ôÏÖ@Ş6dæém,3o	ÿ44aGúYèS9çÚ4ë„t6xÎaG¨túYø‹­ŠBğïGëby' Û=ê¸‹„EhøeO >…9 dF¨F ìßÎ¨¨®u¡mËÉà>ÁlÎı¨ı¹ŠFŠ›W eËßìCÎ¥] KvÒF1aädØ3FUŠŞJÎnG‡G«úá¨ª Ï@ıäGskÆ1 ¹ıŠW1 ›<&ıÇma6Ó>¶äßdÎì11ŠÎÒÁmÏå7Vú…/l¨W¨Šd1uğ8íÇ&Gœæam—ª~+ˆø4©œ•èõoé!AóüA-ìÚ©¨Vú?%‹CÎŸZ‘ï 0¡¾ˆÏÿË›_¸œ7àÄÆÊ[&üü·ñaem3””‚ÎW1u›Îı¹¹´¿uÇ8C†>õ        ¨ ÚüadFLinuKvKìÎél¨PoÌ¨îŠüJe¹ne–šşrÃ çˆ AÏsdNts…l   ›¹¹ ìÎŠŠ¨</ûWmôaë>/
-ßŠìŠ ¹<¶åíƒsÏÉ¶§lÎ¨W ¹ìŠ›‡Ç©¡êGØ¨nË°ÏÓîo	îËpø¸úHÛÊõMa¼ø¸ú„Ïcğì4tË‹PéŞ¨Øsy÷Pèq›
-Ûñste|.½	ÔN0Lm"”ã ¹Š››dd¨¨ W1-QFÖ8%c[¶z±uŠ›dWF¹Šd1øVCŠìeàŠ€©–e¹úFŠ~fF6íû1õ¸k 11¨ F ¨ dZ§u¡’úñĞ
-ì Š›¹ ìFÒ°í°ûÏ”¶} ì Š›ì1Ò¡V)@eÉ*aå!—U	\3RÚÚGÀSS“~R¼øí¾0¾i›øVéìVrHtaı›KØVPsÂLcB5¹ˆ>NŠ ›ÎßdÎì11ŠÎÒuÇå4Añ…/l¨W¨Šd1uìu¨ŠGW¨anWÃæWxº–ì1­‚›Éîç ß0[¸›]!ğüì˜¾Zì1ˆØ©@Šä¸&ãÆìŠ¹ŠÎìıd¹ŠÎÒ¶Q åôë=¶
-d1Š¹¨ÎW1z^ŞƒQ¸ë§…Æ ŠuFß  Ãmember néOeªÔ:DRGr.BSloéËøeúGÉáŠÚÏéFeë.R‹FßiØtÇœDVÌadNtAûnc`Û¨»>ÁäŠŠ¨  ¨ ¹ ¹F<QuO’Ë¾Ó>>“ ¹¨¨Î1Š›¨ŠFÎÚaıìËÕ›Ã¢¨áTÃìuË±Šœ£UÅÌ üµíFæŞát «ú´ìŠçw¹úbß
-šQ/±›Fì¹  ¹¨1Š´§sum|a…/_Fd ŠÎŠ¹–”OŞ)&íú>z1›ud1´ŞO7ÏÉdôÏf\wC¼túYùŸ £péííciíé ü¾À4ÏpuÛiElírQy*è1îÁã‚¨ı ì Š›¹ ìFÒQ¨å°øØ”¶} ì Š›ì1ÎìdpeÚFdaædÃ ZÎßC
-ÎrMˆ\ª¨ü¤GW¢e‡ŞïúZdF£w ë¸QßVb± u¨Š  dŠ ›ÒĞ7›¡|pØ—Ğã
-Š¨u¨›F´XåÏ)Qt'òX‚ŠdÎ¨  KÇí^s©¨*­ƒŞ†UÔÌ4V¯•`5äÅ­¼Vú?0œKÎVì©'À©Ëıù‡]«±!ÖØª‹ÿC äí'ê=ær`$ ˆ§…äW1u›Îı¹¹¨ğsß8Oy>ò
-       ¨ ¨ËeaÎCL iFiTáßıaärÔÿÎçÌ¨Vhü n‹–V¹gØd¨fØebWltûk
-  ›¹¹ ìÎŠŠ¨ <§Quômøy(ßŠìŠ ¹ ¥§å‹|ÈŞú”kä¨W ¹ìŠ››–¡©å@Ïú Ä¼Ç‹ñ ~îaø­í¦èèlM­ø­íØ¦VëáCÏŠGP•é­ı(Sà@ütÇÊçolepnÖD…/_Fd ŠÎŠ¹Š››x7ıåmch>±ud1¨W›uŠ›d%øÎ0yÏL‹´e¨Ø‡¨Î~ÿFúQß}th¨ú!í¹œÏu1ésFC ìJLa)ëFo®•‹ëü>× ì Š›¹ ìFÎı´òêßÇÚyò ›ì1Îìd ›xrí)Ë/I}ÅŞG\ÎeCœ[¾çÿìA¢ ÏéëPe¿td¹«KËW uyÕCmK6ª† o6ŠbÂÎœ%¸xÍÎš ËæuzÌÒAáæË6J79¸nûŞ6K€T¤obÏëG7«‹³xãœŞÖëIûXòNı›d¨¨ìÃã^í|‹P”Á9ß¨ìuÎììŠ¥Ç‹^®¸6¹ÄƒüwÅ£"ø4øtrjBÛõÅaG'üœZ¹Ëüé¨eØ{pdF–rst">
- ¨ ¨¹  FÎsu|OaPñ……
-¨ ›¨Î¨Š¨ ¹ReŠønŠnì‡vZÎupN rç of›íñeì€ÏÒü gúKd¹oÿFrGsW“Ş¿† Aütìúæ‹uŠÚûŠÎìnø¡ÃØ›Å®¦íAŞ…
-ŠıŠÎìŠŠ ¨ı´IûÎôma¾ñã… ¨1¹¨F1ŠFÎ›‡©ôarò@¶_ÅVí² tht 	Ì6LdbÏÎËúÉŞQÈ! ¨şi13FJÕ4)xAª[›M'ŠÙ=WøÙG-ÍVìpæWãª¥eğ	æPÓ7lûü6ğ¢‰JÅs{ícgü/6år§ŒĞ…‚ı ì Š›¹<ã‹O¿í¯§§lŠ›W ì Š›ğOtƒ®V6nÚO!=ª	3%VØ„q‚MCCV¾¦Ï¾KeÎVú¦ae¨Wië®VåftfÚWlVw¶§
- dŠ ›ÎßdÎì11–›ƒmËú,…±F¨W¨Šd1uìuÚÏ%FÎRæ iÎáEx¨Šé(ìœÔÌWöD¨—!³ŞK0¨ï¾–¨çwWœGÙ¹_‹ûàuœ©¸ßëÄ‹Wì¼7¹ËÎŠàL4åğ¹+ê{e'e§“¨ÎW1u›Îı¹¥§¿uÇ8C†>õ        ¨ ´ëemœIQ>N~Ve¨Ïàe¨PoÌ¨éÄ¨@e¹ac‹QêeÎFvá ÎyCmiëD, oÉ¹ûyìËÙüinïtö ø kDKœŞ¥ÅnRëy¿äüÕbŞÉáÄÂçjü¯ŞÜŞ÷ğ§PÏåaØ¶ÙĞÁ(ŠŠ ¨ı¨F´”ôem®í¯¶§‚1¹¨F1ŠFÎOŞÖ©ë nø^í,ˆo²ÌapptrÑ5ÊNR4eØÀíëÃßpŞ% íú.%tpF`Ò;#}GªI¶(uŠ›dWF¹Šd1ŠQ›¡|éÓĞÁä1¹F¨WŠ1 Fd¨Ú!ø¨ÎÄ1xædTiìFCldç £™ÎüàVın©xŞ›şr¥ÎM»¨¯üÙÆÏ,ìrÏÏ¹P‹¨%Q Ú yæ%Ç'FQÀÏAã
-ßì¨¨ìWì Ã…@ıå^aµ/“ıŠW1 › u´Øem%ØkÈĞ±+š©+1Ş†‹ÎrÅÿuPéÕíWéÉ'Vb&©1¨Ü-CÎìynÇáP3àßç6ìŒÂ›øQü‘#©Ô%æ¨…»¥Püx€CØµ“ü÷&š¾¥Äş†Q¦¸'íŒ‰š¢zúüø6ãb>IŠ¹¨ÎW1u”ƒV°ûüúò uFß  ß <member¨LaOí¤"M\ªCRpecSSäöépøGr•ÏœáÎÚGaıerÀ¼Gødùnï‚e|ØDtDauä">±¹¹ ìÎŠŠ¨  ¨<êuôaPyò ìŠ ¹ ¹¨¨Î1ŠéíËÎé ğ¢ÎÒÍÃ¨¹éNŠúoİıÅˆìV[ÏŠní¥üFïÉğd £îıúÏûdõü=Š‹VWÉÕ¨¹as¹R¨uÓLéåic ~b•ØVXld ŠÎŠ¹Š››dx§ûu|pPJ…XN1¨W›uŠ›dWF¥ØV)pØXQĞ‚~üÎ¸†t¹ç ÉpnF&í¨%ú¯‹Ùtu¨vC ªW[n%á"àßú¨Q¤ ¯aÙÏğn«FšMıé³¹ã"ÃØi£nËÉµ}š÷@0PiÕEhoê.Ï0@G‘–‹mCX@ò…‚ìWì ßŠ´§^e®tr§Ğ(ŠW1 › 8íÇbe6ŠnÚƒšyÌ+UË‹r„Û$_ÅÚRí¦í6Zu©4ìÏ6¼Véd`› `h¿‹í)â¬ÔÔüCæOİz>×›d¨¨ìßì¨1WÒQß¡^úµkãÆìŠ¹ŠÎìıd¹ŠÎ¼üC1¨íüdætx01ÍëáŠW~DuAŞF±íê…Æ ŠuFß  ß   </sumåCr[¶”
- FÎ  1/OíÖêeú±¨Î¨Š¨ ¹<m‹ƒ@ürŠaå‹=ç:UCppí.Sq×Ôøp¼‹Ø„Ïriìpeødü.peC›ì¥ØsGù`¨ª¶ãŠ›¨ŠFÎ¨W ¹ìŠ‡Èß¡¡éPÓ¶ ıŠÎìŠŠ ¨ı¨4íÚı a¢¨´æÎágğìpÆFœMU›Ô ìíhe¹]íiŞïúid ~fßŞQ 
-V7 ÎŠ¹Š››dd¨¨ K>bW^Ö46h…}›uŠ›dWF¥…^!|ÈVPĞÁ¨WŠÎìÎ1¹ZåOÈtrF*éå!¤î£\îpaøeSù_oa4í.‹‡ìÚV¼d©r„éüa¨ ‡P®ü’ëîÌÚl¸`ÊŠîäìd ›d ¨dŠK7^ËØ[Xã
-ßì¨¨ìWì ­ÏRì¨RnF¥dğ«KÎC} ÉMw:îŠth!ŠnŞ–‹d‰¾xuŠˆÎrÏû _üÈ/l¨W¨Šd1uìu¨ŠxFåmaÓ¶>ìß¨dìÎ››K¶Oí!Aã¶9d¨¨ìßì¨-‹OÈ©Aßæ­8‹ñîç£îC¼¸6·ùŸ‚ÔC%øü·úxdtËıíœYCG4Wè‡]ºõüè¬1ˆk/lß  ß        ´QuOåøryXã(  1 ¨›¨ ¨peÚìÎéÄ¨Knıiv‡ŠWølŠoÿÎoUŠtyG nít gÉğı £ˆŠØísuäVs”
-¹F  ßŠìŠ ¥/êıåƒpØÂ¶§lÎ¨W ¹ìŠ›‡…¡©å@Ïú>§×ŠÎìŠŠ ´°íêŞë n­å¸µˆÅ+İéaÏÀqS×ö¼éer·túxÎpíéder?Ršßq<E(eåœîüÌÚW×0$è¹"I›ud1¨W›u–È1øØJz Îì1¨WŠÎìÎ1ËéË *ìá2ğ¨›Æ1cçwFMf¨GJedítì˜œáì²fìrÏÈìl¸ã(ı¨ı¹ŠFŠ›W ì –”¿W|ƒ­A=±d ¨dŠWdZX^ÏÇ@œ>/õì¨¨ìWğmšÇQíún¡t=»îRaeÉSS9ÅËpp!Ø.üœ– ¼©puÏœÀ¼eËì}`ñÈVåYÜÓ4V=µ&üÏ)¬\çleÄ¡/Áõ¨dìÎ››W¹¨Fßx@¨Ö^%úñòòÆ¨1WÎŠìß¨ì‹­¨ŠíÂ‹¢¸<íŠ‰œğFuçÿFë!ûdl0b§“¨ÎW1u›Îı¹¥§¿uÇ8C†>õ        ´mGåûerXã(  1 ¨‡åeå@eÉ¨€éÇí"Ô:DRür„5qä£aCÚecGráReaßüë.‹ËÎÎirûV(ÊyêeO.v†Ú©ƒ"”
-¹¨¨Î1Š›¨ŠFÎ¨Ksì¡ÇÚÉÓòÁ‚Š¨ ŠıŠÎìŠøeé¹¨æ›ğnd¥ş´ìßé}¹ú	fŠ	ˆVÓŞF¢üxt¹TúxÎçî rebu“È/_Fd ŠÎŠ¹Š››xkûımpc[¶_d1¨W›u–”)ûÏAz Îì1¨WŠÒ¡‹|ûúWLË|e[fÅ² ø¼Ø?Bùl+CpøVP.áR©Šíúe­dìÒës¸)œf¸î¼ìÆ‚ès¸eÇ•˜[a‹åz/
-›d ¨dŠWdFW–ÙWƒaP†>Æ¨¨ìWì ßŠ¨¨ae¨1a÷ıKÄKgißWaNuúÅw +Ì Ï†šd€©ieŠ‰œ‡dŠç3úŞQäû§N1uìu¨ŠdÎ¨</ßå^p¾†¶IÆÎ››W¹¨FÃk^¸ÖQ!ú¶Áõì¨1WÎŠğ^šå®0œì¢ËôÏÓç øÚ‹ëùõ+ø4øtrjVØğì¼pF0A•¼V¼ıÊá¢gÆ0
-5†stšm.Type)"¶/
-¨¹  FÎ  1sWåÖérñ±¨Î¨Š¨ ¹  ÎÎpüaÎFaæÎi]ÎigKdué
- roÌ¹öfìšÂÏ¨neğV şrğ MfÏ¿ßlGê“¨¨Î1Š›¨ŠFÎ¨W<¶¿ßÖÖË¾µ¶/ ¨ ŠıŠÎì…Çeå¿í¶¶“  ì¨ı¨Š¨-ôísÏÎLCÖŞ[îÔ:DøCøtØÛùlMaapš•e'FeËŠÏë„éGÚ áægt^PwŞ3%dNü_è[&ŞŞ)Y2àÚVm3”>(Îì1¨WŠÎìÎ1¹F´WÇ|a=¶…N¹ìÎFŠ11¨ F ÚVCddæFi¢›‡şáW¨a  ØÔî £ ÎVµíı÷ÏŞ›r¥dŠÔªc‹¿F(Vs¶(d ¨dŠWdFWŠŠIuO’RAµ¶…ÆWì ßŠ¨´m¡seëã/ W1 › iåÏmb!Ø Õ’!Óî\+îeØ¦BäöCøú„Ax10éÎ!PÀaíadÊ»BµŒü!¡ÀıÎúYèÏhS½Š$èº±ÓŸJûeƒù¸A–æ«y½µ¿ŞüÇÀq£²(üË€Ç»X‚¹F¹d¨1 d1Š¹¨ÒdO8RÉ—Ğ“¹¨ì ŠuFß  ßRead mulüKpNí¹ob‹AVs wPoO¨Ú¨sáLg×íÎúÏëMrı s‹šönŠhíÎgAÃd(  ¨F   ›¹¹ ìÒ…ÙımméPy§“F  ßŠì–/^ümûíúĞ ›¨ŠFÎ¨W ¥¡ÏÖÙÏ¾ìæCÇí=ˆª­RCÏØ.Û¬ä+éËéerâÏ¯áÎÚtøìc„4‹CFÛÛRäÊysíVå?ìWæë{``!,ŸŠ5h`Êİ×µùÂQÏ!)¦ÛtxEè,7eGåYùM:ÆŞ%O»”>N1ŠÎì1¨WŠÎìÒbìåPÓ/ld¨¨d¹ìÎFŠ11¨RCd¨^Wl0ø
-eìŒâíP©sìfØÔô ­FK³ï±üŠÏØr¨ ÙŞ¸~€ìG,G ÜP-d…NŠWdFWŠŠFÎ Ğ@F¡åé¾[IÁ
-ßŠ¨¨ Fğ>mü°@Ï
-› u¨Š <)ÏmÙ‹d€­|t—Ì£ÔDËø%Vú•qä:éÚ4Vc{‹'áÎGWír.%ÏéWq¬Ê µÏŞ·dıœ?S½‹$è¹àŸ¬¤qİÊ¬‚¤Ÿ,¸©Ç·ùšA¥³#µù—íG8¦Û	ö(ípnm3””‚ÎW1u›Îı¹¹´¿uÇ8C†>õ        ¨ ÚüadFƒWNtiaNeçÙâeëVs›îœçÇ¨C êin‰‚G¹rÏoúŠ @Ït1Mn üe gÉğıÆÎŠŠ¨  ¨ ¹ ¹Z/QuO’Ë¾Ó>>“ ¹¨¨Î1Š›´…‹åeëò§±›Šìì¨Š¨<Ç¸ÇŒ©PÄËmíàª+²ÿøpp©úóÛÛä\øøtØH©PKßé­ıer·aípÎBè¾(Sybtš•d A?`ÊŞ†ùÊŠÛ$v¤è`D=qB—5$$_¤$ÂQ!ÏÖj$ëÃ]#=ùJQš©|¦5Å ‹p÷OªI/ 1 Fd¨¨d¹ìÎFŠ-bımCrñ/
-dF¨F ìßÎ¨¨ıR©aÎ›ôu ‡R±íıöÈÏØsìfØÔ¡pÎ¿Z*ElŞ6eë+ØdGŠÅLFšhGßTA¥ì…ÆWì ßŠ¨¨ Fğ>sì°OË[/± u¨Š  x…mŞƒ!œòŠÎÎÎ Š¨uåŞOí¨Ä%^thî²î%RVú.SÆÅRa¼šúj‹œÒß%üCìja¸ÚW$è¿ä¬µ@ütÀdß¢P„è¬eÂ¬¬›µÊà½$ª†­5è¬Jù$¾l,hÙííƒYBV'ZÕ‰àêü©m„M	“ean)">
+            <typeparam name="TThird"></typeparam>
+            <typeparam name="TFourth"></typeparam>
+            <typeparam name="TFifth"></typeparam>
+            <typeparam name="TSixth"></typeparam>
+            <typeparam name="TSeventh"></typeparam>
+            <typeparam name="TReturn"></typeparam>
+            <param name="cnn"></param>
+            <param name="sql"></param>
+            <param name="map"></param>
+            <param name="param"></param>
+            <param name="transaction"></param>
+            <param name="buffered"></param>
+            <param name="splitOn"></param>
+            <param name="commandTimeout"></param>
+            <param name="commandType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dapper.SqlMapper.Query``1(System.Data.IDbConnection,System.String,System.Type[],System.Func{System.Object[],``0},System.Object,System.Data.IDbTransaction,System.Boolean,System.String,System.Nullable{System.Int32},System.Nullable{System.Data.CommandType})">
+            <summary>
+            Perform a multi mapping query with arbitrary input parameters
+            </summary>
+            <typeparam name="TReturn">The return type</typeparam>
+            <param name="cnn"></param>
+            <param name="sql"></param>
+            <param name="types">array of types in the record set</param>
+            <param name="map"></param>
+            <param name="param"></param>
+            <param name="transaction"></param>
+            <param name="buffered"></param>
+            <param name="splitOn">The Field we should split and read the second object from (default: id)</param>
+            <param name="commandTimeout">Number of seconds before command execution timeout</param>
+            <param name="commandType">Is it a stored proc or a batch?</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dapper.SqlMapper.ReadChar(System.Object)">
+            <summary>
+            Internal use only
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dapper.SqlMapper.ReadNullableChar(System.Object)">
+            <summary>
+            Internal use only
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapper.FindOrAddParameter(System.Data.IDataParameterCollection,System.Data.IDbCommand,System.String)">
+            <summary>
+            Internal use only
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapper.PackListParameters(System.Data.IDbCommand,System.String,System.Object)">
+            <summary>
+            Internal use only
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapper.SanitizeParameterValue(System.Object)">
+            <summary>
+            OBSOLETE: For internal usage only. Sanitizes the paramter value with proper type casting.
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapper.ReplaceLiterals(Dapper.SqlMapper.IParameterLookup,System.Data.IDbCommand)">
+            <summary>
+            Replace all literal tokens with their text form
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapper.Format(System.Object)">
+            <summary>
+            Convert numeric values to their string form for SQL literal purposes
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapper.CreateParamInfoGenerator(Dapper.SqlMapper.Identity,System.Boolean,System.Boolean)">
+            <summary>
+            Internal use only
+            </summary>
+        </member>
+        <member name="F:Dapper.SqlMapper.TypeMapProvider">
+            <summary>
+            Gets type-map for the given type
+            </summary>
+            <returns>Type map instance, default is to create new instance of DefaultTypeMap</returns>
+        </member>
+        <member name="M:Dapper.SqlMapper.GetTypeMap(System.Type)">
+            <summary>
+            Gets type-map for the given type
+            </summary>
+            <returns>Type map implementation, DefaultTypeMap instance if no override present</returns>
+        </member>
+        <member name="M:Dapper.SqlMapper.SetTypeMap(System.Type,Dapper.SqlMapper.ITypeMap)">
+            <summary>
+            Set custom mapping for type deserializers
+            </summary>
+            <param name="type">Entity type to override</param>
+            <param name="map">Mapping rules impementation, null to remove custom map</param>
+        </member>
+        <member name="M:Dapper.SqlMapper.GetTypeDeserializer(System.Type,System.Data.IDataReader,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Internal use only
+            </summary>
+            <param name="type"></param>
+            <param name="reader"></param>
+            <param name="startBound"></param>
+            <param name="length"></param>
+            <param name="returnNullIfFirstMissing"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dapper.SqlMapper.ThrowDataException(System.Exception,System.Int32,System.Data.IDataReader,System.Object)">
+            <summary>
+            Throws a data exception, only used internally
+            </summary>
+        </member>
+        <member name="P:Dapper.SqlMapper.ConnectionStringComparer">
+            <summary>
+            How should connection strings be compared for equivalence? Defaults to StringComparer.Ordinal.
+            Providing a custom implementation can be useful for allowing multi-tenancy databases with identical
+            schema to share strategies. Note that usual equivalence rules apply: any equivalent connection strings
+            <b>MUST</b> yield the same hash-code.
+            </summary>
+        </member>
+        <member name="F:Dapper.SqlMapper.DataTableTypeNameKey">
+            <summary>
+            Key used to indicate the type name associated with a DataTable
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapper.AsTableValuedParameter(System.Data.DataTable,System.String)">
+            <summary>
+            Used to pass a DataTable as a TableValuedParameter
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapper.SetTypeName(System.Data.DataTable,System.String)">
+            <summary>
+            Associate a DataTable with a type name
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapper.GetTypeName(System.Data.DataTable)">
+            <summary>
+            Fetch the type name associated with a DataTable
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapper.AsTableValuedParameter(System.Collections.Generic.IEnumerable{Microsoft.SqlServer.Server.SqlDataRecord},System.String)">
+            <summary>
+            Used to pass a IEnumerable&lt;SqlDataRecord&gt; as a TableValuedParameter
+            </summary>
+        </member>
+        <member name="T:Dapper.SqlMapper.DontMap">
+            <summary>
+            Dummy type for excluding from multi-map
+            </summary>
+        </member>
+        <member name="T:Dapper.SqlMapper.GridReader">
+            <summary>
+            The grid reader provides interfaces for reading multiple result sets from a Dapper query
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapper.GridReader.ReadAsync(System.Boolean)">
+            <summary>
+            Read the next grid of results, returned as a dynamic object
+            </summary>
+            <remarks>Note: each row can be accessed via "dynamic", or by casting to an IDictionary&lt;string,object&gt;</remarks>
+        </member>
+        <member name="M:Dapper.SqlMapper.GridReader.ReadFirstAsync">
+            <summary>
+            Read an individual row of the next grid of results, returned as a dynamic object
+            </summary>
+            <remarks>Note: the row can be accessed via "dynamic", or by casting to an IDictionary&lt;string,object&gt;</remarks>
+        </member>
+        <member name="M:Dapper.SqlMapper.GridReader.ReadFirstOrDefaultAsync">
+            <summary>
+            Read an individual row of the next grid of results, returned as a dynamic object
+            </summary>
+            <remarks>Note: the row can be accessed via "dynamic", or by casting to an IDictionary&lt;string,object&gt;</remarks>
+        </member>
+        <member name="M:Dapper.SqlMapper.GridReader.ReadSingleAsync">
+            <summary>
+            Read an individual row of the next grid of results, returned as a dynamic object
+            </summary>
+            <remarks>Note: the row can be accessed via "dynamic", or by casting to an IDictionary&lt;string,object&gt;</remarks>
+        </member>
+        <member name="M:Dapper.SqlMapper.GridReader.ReadSingleOrDefaultAsync">
+            <summary>
+            Read an individual row of the next grid of results, returned as a dynamic object
+            </summary>
+            <remarks>Note: the row can be accessed via "dynamic", or by casting to an IDictionary&lt;string,object&gt;</remarks>
+        </member>
+        <member name="M:Dapper.SqlMapper.GridReader.ReadAsync(System.Type,System.Boolean)">
+            <summary>
+            Read the next grid of results
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapper.GridReader.ReadFirstAsync(System.Type)">
+            <summary>
+            Read an individual row of the next grid of results
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapper.GridReader.ReadFirstOrDefaultAsync(System.Type)">
+            <summary>
+            Read an individual row of the next grid of results
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapper.GridReader.ReadSingleAsync(System.Type)">
+            <summary>
+            Read an individual row of the next grid of results
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapper.GridReader.ReadSingleOrDefaultAsync(System.Type)">
+            <summary>
+            Read an individual row of the next grid of results
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapper.GridReader.ReadAsync``1(System.Boolean)">
+            <summary>
+            Read the next grid of results
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapper.GridReader.ReadFirstAsync``1">
+            <summary>
+            Read an individual row of the next grid of results
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapper.GridReader.ReadFirstOrDefaultAsync``1">
+            <summary>
+            Read an individual row of the next grid of results
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapper.GridReader.ReadSingleAsync``1">
+            <summary>
+            Read an individual row of the next grid of results
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapper.GridReader.ReadSingleOrDefaultAsync``1">
+            <summary>
+            Read an individual row of the next grid of results
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapper.GridReader.Read(System.Boolean)">
+            <summary>
+            Read the next grid of results, returned as a dynamic object
+            </summary>
+            <remarks>Note: each row can be accessed via "dynamic", or by casting to an IDictionary&lt;string,object&gt;</remarks>
+        </member>
+        <member name="M:Dapper.SqlMapper.GridReader.ReadFirst">
+            <summary>
+            Read an individual row of the next grid of results, returned as a dynamic object
+            </summary>
+            <remarks>Note: the row can be accessed via "dynamic", or by casting to an IDictionary&lt;string,object&gt;</remarks>
+        </member>
+        <member name="M:Dapper.SqlMapper.GridReader.ReadFirstOrDefault">
+            <summary>
+            Read an individual row of the next grid of results, returned as a dynamic object
+            </summary>
+            <remarks>Note: the row can be accessed via "dynamic", or by casting to an IDictionary&lt;string,object&gt;</remarks>
+        </member>
+        <member name="M:Dapper.SqlMapper.GridReader.ReadSingle">
+            <summary>
+            Read an individual row of the next grid of results, returned as a dynamic object
+            </summary>
+            <remarks>Note: the row can be accessed via "dynamic", or by casting to an IDictionary&lt;string,object&gt;</remarks>
+        </member>
+        <member name="M:Dapper.SqlMapper.GridReader.ReadSingleOrDefault">
+            <summary>
+            Read an individual row of the next grid of results, returned as a dynamic object
+            </summary>
+            <remarks>Note: the row can be accessed via "dynamic", or by casting to an IDictionary&lt;string,object&gt;</remarks>
+        </member>
+        <member name="M:Dapper.SqlMapper.GridReader.Read``1(System.Boolean)">
+            <summary>
+            Read the next grid of results
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapper.GridReader.ReadFirst``1">
+            <summary>
+            Read an individual row of the next grid of results
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapper.GridReader.ReadFirstOrDefault``1">
+            <summary>
+            Read an individual row of the next grid of results
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapper.GridReader.ReadSingle``1">
+            <summary>
+            Read an individual row of the next grid of results
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapper.GridReader.ReadSingleOrDefault``1">
+            <summary>
+            Read an individual row of the next grid of results
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapper.GridReader.Read(System.Type,System.Boolean)">
+            <summary>
+            Read the next grid of results
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapper.GridReader.ReadFirst(System.Type)">
+            <summary>
+            Read an individual row of the next grid of results
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapper.GridReader.ReadFirstOrDefault(System.Type)">
+            <summary>
+            Read an individual row of the next grid of results
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapper.GridReader.ReadSingle(System.Type)">
+            <summary>
+            Read an individual row of the next grid of results
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapper.GridReader.ReadSingleOrDefault(System.Type)">
+            <summary>
+            Read an individual row of the next grid of results
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapper.GridReader.Read``3(System.Func{``0,``1,``2},System.String,System.Boolean)">
+            <summary>
+            Read multiple objects from a single record set on the grid
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapper.GridReader.Read``4(System.Func{``0,``1,``2,``3},System.String,System.Boolean)">
+            <summary>
+            Read multiple objects from a single record set on the grid
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapper.GridReader.Read``5(System.Func{``0,``1,``2,``3,``4},System.String,System.Boolean)">
+            <summary>
+            Read multiple objects from a single record set on the grid
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapper.GridReader.Read``6(System.Func{``0,``1,``2,``3,``4,``5},System.String,System.Boolean)">
+            <summary>
+            Read multiple objects from a single record set on the grid
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapper.GridReader.Read``7(System.Func{``0,``1,``2,``3,``4,``5,``6},System.String,System.Boolean)">
             <summary>
             Read multiple objects from a single record set on the grid
             </summary>

@@ -34,17 +34,18 @@
 }
 
 @{
+    
     // выборка существующих значений энергии и воды сортировка по возрастанию часа суток
-    List<PumpDb.ByHourStat> energyDataExist = Model.Where(x => x.TotalEnergy.HasValue&&x.TotalEnergy.Value>0).OrderBy(x => x.HourTime).ToList();
-    List<PumpDb.ByHourStat> waterDataExist = Model.Where(x => x.TotalWaterRate.HasValue&&x.TotalWaterRate.Value>0).OrderBy(x => x.HourTime).ToList();
+    List<PumpDb.ByHourStat> energyDataExist = Model.Where(x => x.TotalEnergy.HasValue).OrderBy(x => x.HourTime).ToList();
+    List<PumpDb.ByHourStat> waterDataExist = Model.Where(x => x.TotalWaterRate.HasValue).OrderBy(x => x.HourTime).ToList();
     
     // берем расход как разность последнего и первого показания
     double energyLose=energyDataExist.Count>1?energyDataExist[energyDataExist.Count-1].TotalEnergy.Value-energyDataExist[0].TotalEnergy.Value:0;
-    TimeSpan energyDateRange = energyDataExist.Count > 1 ? energyDataExist[energyDataExist.Count - 1].RecvDate.Value.Subtract(energyDataExist[0].RecvDate.Value) : TimeSpan.FromMinutes(0);
+    TimeSpan energyDateRange = energyDataExist.Count > 1 ? energyDataExist[energyDataExist.Count - 1].RecvDateEnergy.Value.Subtract(energyDataExist[0].RecvDateEnergy.Value) : TimeSpan.FromMinutes(0);
 
     double waterLose = waterDataExist.Count > 1 ? waterDataExist[waterDataExist.Count - 1].TotalWaterRate.Value - waterDataExist[0].TotalWaterRate.Value : 0;
-    TimeSpan waterDateRange = waterDataExist.Count > 1 ? waterDataExist[waterDataExist.Count - 1].RecvDate.Value.Subtract(waterDataExist[0].RecvDate.Value) : TimeSpan.FromMinutes(0);
-
+    TimeSpan waterDateRange = waterDataExist.Count > 1 ? waterDataExist[waterDataExist.Count - 1].RecvDateWater.Value.Subtract(waterDataExist[0].RecvDateWater.Value) : TimeSpan.FromMinutes(0);
+    
     
 }
 
@@ -54,32 +55,33 @@
     <table id="dataReport" class="table table-condensed table-bordered" style="width:100%; background-color:#fff; border:1px solid black">
         <thead>
             <tr>
-                <th colspan="7" style="text-align:center">
+                <th colspan="8" style="text-align:center">
                     <span style="font-weight:normal">Суточный почасовой отчет потребления по </span> @(ViewBag.ObjectName ?? "-")
                 </th>
             </tr>
             <tr>
-                <th>
+                <th rowspan="2" style="vertical-align:middle">
                     Час суток
                 </th>
-                <th>
-                    Время получения данных
+                <th colspan="3" style="text-align:center">
+                    Электроэнергия                    
                 </th>
-                <th>
-                    Показание счетчика электроэнергии, кВтч
+                <th colspan="3" style="text-align:center">
+                    Вода
                 </th>
-                <th>
-                    Расход за час, кВтч
-                </th>
-                <th>
-                    Показания счетчика воды, м<sup>3</sup>
-                </th>
-                <th>
-                    Расход за час, м<sup>3</sup>
-                </th>
-                <th>
+               
+               
+                <th rowspan="2" style="vertical-align:middle">
                     Уд расх в часе, кВтч/м<sup>3</sup>
                 </th>
+            </tr>
+            <tr>
+                <th>Время снятия</th>
+                <th>Показание электроэнергии, кВтч</th>
+                <th>Расход в часе, кВтч</th>
+                <th>Время снятия</th>
+                <th>Показание воды, м<sup>3</sup></th>
+                <th>Расход в часе, м<sup>3</sup></th>
             </tr>
         </thead>
         
@@ -92,9 +94,9 @@
 
                     </td>
                     <td>
-                        @if (Model[i].RecvDate.HasValue)
+                        @if (Model[i].RecvDateEnergy.HasValue)
                         {
-                            @Model[i].RecvDate.Value.ToString("dd.MM.yy HH:mm:ss")
+                            @Model[i].RecvDateEnergy.Value.ToString("dd.MM.yy HH:mm:ss")
                         }
                         else
                         {
@@ -116,7 +118,7 @@
                     <td>
                         @if (i > 0)
                         {
-                            if (Model[i].TotalEnergy.HasValue && Model[i - 1].TotalEnergy.HasValue&&Model[i].TotalEnergy.Value>=0&&Model[i-1].TotalEnergy.Value>=0)
+                            if (Model[i].TotalEnergy.HasValue && Model[i - 1].TotalEnergy.HasValue)
                             {
                                 @((Model[i].TotalEnergy.Value - Model[i - 1].TotalEnergy.Value).ToString("0.##0"))
                             }
@@ -129,6 +131,16 @@
                         {
                             @:-
             }
+                    </td>
+                    <td>
+                        @if (Model[i].RecvDateWater.HasValue)
+                        {
+                            @Model[i].RecvDateWater.Value.ToString("dd.MM.yy HH:mm:ss")
+                        }
+                        else
+                        {
+                            <span class="text-muted">нет данных</span>
+                        }
                     </td>
                     <td>
                         @if (Model[i].TotalWaterRate.HasValue)
@@ -144,7 +156,7 @@
                     <td>
                         @if (i > 0)
                         {
-                            if (Model[i].TotalWaterRate.HasValue && Model[i - 1].TotalWaterRate.HasValue&&Model[i].TotalWaterRate.Value>=0&&Model[i-1].TotalWaterRate.Value>=0)
+                            if (Model[i].TotalWaterRate.HasValue && Model[i - 1].TotalWaterRate.HasValue)
                             {
                                 @((Model[i].TotalWaterRate.Value - Model[i - 1].TotalWaterRate.Value).ToString("0.##0"))
                             }
@@ -162,12 +174,12 @@
                         @if (i > 0)
                         {
                             // если есть энергия
-                            if (Model[i].TotalEnergy.HasValue && Model[i - 1].TotalEnergy.HasValue && Model[i].TotalEnergy.Value >= 0 && Model[i - 1].TotalEnergy.Value >= 0)
+                            if (Model[i].TotalEnergy.HasValue && Model[i - 1].TotalEnergy.HasValue)
                             {
                                 double energy = Model[i].TotalEnergy.Value - Model[i - 1].TotalEnergy.Value;
                                 
                                 // если есть вода
-                                if (Model[i].TotalWaterRate.HasValue && Model[i - 1].TotalWaterRate.HasValue&&Model[i].TotalWaterRate.Value>=0&&Model[i-1].TotalWaterRate.Value>=0)
+                                if (Model[i].TotalWaterRate.HasValue && Model[i - 1].TotalWaterRate.HasValue)
                                     {
                                         double water = Model[i].TotalWaterRate.Value - Model[i - 1].TotalWaterRate.Value;
                                         if (water == 0)
@@ -198,11 +210,12 @@
         </tbody>
         <tfoot>
             <tr>
-                <td colspan="7" style="text-align:center">
+                <td colspan="8" style="text-align:center">
                     <b>Суммарный расход</b>
                 </td>
             </tr>
             <tr>
+                <td></td>
                 <td colspan="3" style="text-align:center">
                     <b>Электроэнергия, кВтч</b>
                 </td>
@@ -211,8 +224,9 @@
                 </td>
                 <td></td>
             </tr>
+            
             <tr>
-                
+                <td></td>
                 <td colspan="2" class="text-center">@energyLose.ToString("0.##0")</td>
                 <td>@energyDateRange.Hours ч. @energyDateRange.Minutes мин.</td>
                 
@@ -220,6 +234,7 @@
                 <td>@waterDateRange.Hours ч. @waterDateRange.Minutes мин.</td>
                 <td></td>
             </tr>
+                
         </tfoot>
 
     </table>
