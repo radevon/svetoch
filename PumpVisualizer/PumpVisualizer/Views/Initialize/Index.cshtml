@@ -70,6 +70,11 @@
                                <input id="switchmap" type="checkbox" data-ng-model="mapView" data-ng-disabled="flagEdit"/>
                                <label class="text-muted" for="switchmap" style="font-weight: normal; cursor: pointer">&nbsp;вкл. карту</label>
                            </td>
+                           <td style="text-align: right" title="Просмотр отчетов по потреблению">
+                               <a href='@Url.Action("Index", "Report")' target="_self" class="btn btn-sm btn-default">
+                                   <span class="glyphicon glyphicon-bell"></span> Отчеты
+                               </a>
+                           </td>
                            <td style="text-align: right" title="Сброс настроек">
                                <a href='@Url.Action("RequestParam", "Request")' target="_self" class="btn btn-sm btn-default">
                                    <span class="glyphicon glyphicon-bell"></span> Сброс

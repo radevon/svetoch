@@ -279,6 +279,8 @@ union select  datetime(date(@day_)||' '||time('13:00:00')) union select  datetim
          * 
          * */
 
+
+        /*
         public IEnumerable<ByHourStat> GetStatByDays(DateTime month, string identity)
         {
             IEnumerable<ByHourStat> parameters = Enumerable.Empty<ByHourStat>();
@@ -293,6 +295,41 @@ union select  datetime(date(@day_)||' '||time('13:00:00')) union select  datetim
 SELECT dates.date as HourTime,  params.recvDate, params.TotalEnergy, ifnull((select waterStartValue from waterKoefs where identity=@identity_),0)+ params.TotalWaterRate*ifnull((select waterKoef from waterKoefs where identity=@identity_),1) as TotalWaterRate  FROM dates
 left join 
 (select par.recvDate, par.TotalEnergy, par.TotalWaterRate from electricandwaterparams par where par.identity=@identity_) params on params.recvDate=(select min(e.recvDate) from electricandwaterparams e where e.identity=@identity_ and e.recvDate>=dates.date and e.recvDate<datetime(dates.date,'+1 day') and (e.TotalEnergy>0 or e.TotalWaterRate>0))";
+            using (IDbConnection conn = new SQLiteConnection(this.db_.GetDefaultConnectionString()))
+            {
+                parameters = conn.Query<ByHourStat>(sqlstring, new { identity_ = identity, day_ = startMonth.ToString("yyyy-MM-dd") });
+            }
+            return parameters;
+        }
+        */
+
+        public IEnumerable<ByHourStat> GetStatByDays(DateTime month, string identity)
+        {
+            IEnumerable<ByHourStat> parameters = Enumerable.Empty<ByHourStat>();
+            DateTime startMonth = new DateTime(month.Year, month.Month, 1);
+            string sqlstring = @"WITH RECURSIVE dates(date) AS (
+  VALUES(@day_)
+  UNION ALL
+  SELECT datetime(date, '+1 day')
+  FROM dates
+  WHERE date < datetime(@day_,'+1 month')
+) 
+select dates.date as HourTime,
+	   energy.recvDate as recvDateEnergy,
+	   energy.TotalEnergy,
+	   water.recvDate as recvDateWater,
+	   ifnull((select waterStartValue from waterKoefs where identity=@identity_),0)+ water.TotalWaterRate*ifnull((select waterKoef from waterKoefs where identity=@identity_),1) as TotalWaterRate
+	   
+	   from dates
+	   left join 
+            (select par.recvDate, par.TotalEnergy from electricandwaterparams par where par.identity=@identity_ and par.TotalEnergy>0) energy 
+	   on energy.recvDate=(select min(e.recvDate) from electricandwaterparams e where e.identity=@identity_ and e.recvDate>=dates.date and e.recvDate<datetime(dates.date,'+1 day') and e.TotalEnergy>0) 
+	   
+	   left join 
+            (select par.recvDate, par.TotalWaterRate from electricandwaterparams par where par.identity=@identity_ and par.TotalWaterRate>0) water 
+	   on water.recvDate=(select min(e.recvDate) from electricandwaterparams e where e.identity=@identity_ and e.recvDate>=dates.date and e.recvDate<datetime(dates.date,'+1 day') and e.TotalWaterRate>0) 
+	   
+	   order by dates.date";
             using (IDbConnection conn = new SQLiteConnection(this.db_.GetDefaultConnectionString()))
             {
                 parameters = conn.Query<ByHourStat>(sqlstring, new { identity_ = identity, day_ = startMonth.ToString("yyyy-MM-dd") });
