@@ -236,7 +236,17 @@
 
                 <td colspan="2" class="text-center">@waterLose.ToString("0.##0")</td>
                 <td>@waterDateRange.Hours ч. @waterDateRange.Minutes мин.</td>
-                <td></td>
+                <td class="text-center">
+                    @if (waterLose > 0 && energyDateRange.TotalSeconds > 0)
+                    {
+                        double calculated = energyLose / waterLose * (waterDateRange.TotalSeconds / energyDateRange.TotalSeconds);
+                        @calculated.ToString("0.0###")
+                    }
+                    else
+                    {
+                        @:∞
+                    }
+                </td>
             </tr>
 
         </tfoot>
