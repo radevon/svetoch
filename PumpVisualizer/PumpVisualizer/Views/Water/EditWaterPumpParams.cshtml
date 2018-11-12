@@ -1,0 +1,73 @@
+﻿@model PumpVisualizer.WaterImpulsParameter
+
+@{
+    ViewBag.Title = "Настройка начальных параметров счетчика воды";
+    Layout = "~/Views/Shared/MainLayout.cshtml";
+}
+
+
+@Html.Partial("topmenu")
+
+
+
+
+<div class="container" style="margin-top: 65px">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <h2 class="text-muted">Начальные установки импульсного счетчика воды</h2>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-sm-7 col-xs-8">
+            @using (Html.BeginForm("EditWaterPumpParams", "Water", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal" }))
+            {
+                @Html.AntiForgeryToken()
+                
+                <div class="form-group">
+                    <label for="Identity">Идентификатор объекта</label>
+                    @Html.TextBoxFor(x=>x.Identity,new {@class="form-control",@readonly="readonly"})
+                </div>
+
+                 <div class="form-group">
+                    <label for="WaterKoef">Коэффициент пересчета импульсов в м<sup>3</sup></label>
+                    @Html.TextBoxFor(x=>x.WaterKoef,new {@class="form-control"})
+                    @Html.ValidationMessageFor(x=>x.WaterKoef)
+                </div>
+                
+               <div class="form-group">
+                   <label for="CurrentWaterImpulse" title="Значение берется из базы на основе последних полученных данных с прибора. Если данные не актуальны, введите корректное значение">Текущее значение импульсов соответствующее потребленному объему воды <i>I</i></label>
+                    @Html.TextBoxFor(x => x.CurrentWaterImpulse, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.CurrentWaterImpulse)
+                </div>
+                
+                <div class="form-group">
+                    <label for="WaterVolume">Корректное текущее значение потребленного объёма воды, м<sup>3</sup></label>
+                    @Html.TextBoxFor(x => x.WaterVolume, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.WaterVolume)
+                </div>
+
+                   <div class="form-group">
+                    <span class="text-warning" style="font-size:20px;">@(TempData["message"] ?? "")</span>
+                </div>
+
+                   
+
+                
+                
+                 <input type="submit" class="btn btn-default" value="Сохранить"/>
+                <a href='@(ViewBag.ReturnUrl??@Url.Action("Index","Initialize"))' target="_self" class="btn btn-success pull-right">Просмотр показаний</a>
+            }
+            </div>
+        <div class="col-md-6 col-sm-5 col-xs-4">
+            @Html.ActionLink("Прежний редактор нач. парам-ов", "ViewWaterParams", "Water", new { identity = Model.Identity, ReturnUrl = ViewBag.ReturnUrl }, new { @class="pull-right btn btn-default"})
+        </div>
+        </div>
+
+        </div>
+
+
+        @section Scripts {
+            <script src='@Url.Content("~/js/jqueryval/jquery.validate.min.js")'></script>
+            <script src='@Url.Content("~/js/jqueryval/jquery.validate.unobtrusive.min.js")'></script>
+        }

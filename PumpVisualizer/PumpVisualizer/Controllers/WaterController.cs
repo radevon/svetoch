@@ -185,6 +185,97 @@ namespace PumpVisualizer.Controllers
                     };
                 return Json(param);
         }
+
+
+        public ActionResult EditWaterPumpParams(string identity, string ReturnUrl)
+        {
+            WaterImpulsParameter initialized = new WaterImpulsParameter();
+            try
+            {
+                WaterKoefs koef = repo_.GetKoefsByIdentity(identity);
+                ElectricAndWaterParams last = repo_.GetPumpParamsByIdentityLast(identity);
+                double CurrentInpulses = last==null?0:last.TotalWaterRate;//repo_.GetLastWaterImpulse(identity);
+                initialized.Identity = identity;
+                if(koef!=null){
+                    initialized.WaterKoef = koef.WaterKoef;
+                    
+                }
+                else
+                {
+                    initialized.WaterKoef = 1;
+                    
+                }
+                initialized.WaterVolume = 0;
+                initialized.CurrentWaterImpulse = CurrentInpulses;
+
+                ViewBag.ReturnUrl = ReturnUrl;
+                return View(initialized);
+            }
+            catch (Exception ex)
+            {
+                LogMessage message = new LogMessage()
+                {
+                    Id = -1,
+                    MessageDate = DateTime.Now,
+                    UserName = User.Identity.Name,
+                    MessageType = "error",
+                    MessageText = ex.Message + ex.StackTrace
+                };
+
+                loger.LogToFile(message);
+                loger.LogToDatabase(message);
+
+                return Content("Ошибка при получении номинальных параметров насоса с идентификатором: " + identity);
+            }
+            
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditWaterPumpParams(WaterImpulsParameter param, string ReturnUrl)
+        {
+            if (!ModelState.IsValid)
+            {
+                ViewBag.ReturnUrl = ReturnUrl;
+                TempData["message"] = "Проверьте правильность заполнения полей!";
+                return View("EditWaterPumpParams", param);
+            }
+            WaterKoefs k = new WaterKoefs();
+            k.Identity = param.Identity;
+            k.WaterKoef = param.WaterKoef;
+            k.WaterStartValue = param.StartWaterImpulse;
+            try
+            {
+                int res = repo_.AddOrUpdateKoef(k);
+                if (res > 0)
+                {
+                    TempData["message"] = String.Format("Значения успешно сохранены! Начальное значение импульсного счетчика:{0:f2}, множитель: {1:f3}, Расход: {2:f3}",k.WaterStartValue, k.WaterKoef, param.WaterVolume);
+                }
+                else
+                {
+                    TempData["message"] = "Не удалось изменить параметры счетчика! Метод записи в базу возвратил нулевое кол-во измененных строк";
+                }
+                return RedirectToAction("EditWaterPumpParams", "Water", new { identity = k.Identity, ReturnUrl = ReturnUrl });
+            }
+            catch (Exception ex)
+            {
+                LogMessage message = new LogMessage()
+                {
+                    Id = -1,
+                    MessageDate = DateTime.Now,
+                    UserName = User.Identity.Name,
+                    MessageType = "error",
+                    MessageText = ex.Message + ex.StackTrace
+                };
+
+                loger.LogToFile(message);
+                loger.LogToDatabase(message);
+
+                return Content("Ошибка при обновлении параметров счетчика воды с идентификатором: " + k.Identity);
+            }
+
+           
+        }
        
     }
 }

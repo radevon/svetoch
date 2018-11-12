@@ -132,6 +132,16 @@ namespace PumpDb
             return parameters;
         }
 
+         public ElectricAndWaterParams GetPumpParamsByIdentityLast(string identity)
+        {
+            ElectricAndWaterParams parameters = null;
+
+            using (IDbConnection conn = new SQLiteConnection(this.db_.GetDefaultConnectionString()))
+            {
+                parameters = conn.Query<ElectricAndWaterParams>("select Id, Identity, TotalEnergy, Amperage1, Amperage2, Amperage3, Voltage1, Voltage2, Voltage3, CurrentElectricPower, TotalWaterRate, RecvDate, Frequrency, Presure, Temperature, Errors from ElectricAndWaterParams where Identity=@identity_ order by recvDate desc limit 1;", new { identity_ = identity}).SingleOrDefault();
+            }
+            return parameters;
+        }
 
         // расширеный метод для получения расхода воды с учетом коэффиц и нач значения
         public IEnumerable<ElectricAndWaterParamsExtended> GetExtendedPumpParamsByIdentityAndDate(string identity, DateTime from, DateTime to)
@@ -145,6 +155,7 @@ namespace PumpDb
             return parameters;
         }
 
+        
         #endregion
 
         // таблица начальных параметров воды

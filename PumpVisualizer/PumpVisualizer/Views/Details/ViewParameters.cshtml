@@ -297,7 +297,7 @@
     </div>
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <a href='@Url.Action("ViewWaterParams", "Water", new { identity = Model.Identity, ReturnUrl=Request.RawUrl })' target="_self" class="btn btn-sm btn-default pull-right"><span class="glyphicon glyphicon-wrench">&nbsp;</span>Начальные параметры счетчика воды</a>
+            <a href='@Url.Action("EditWaterPumpParams", "Water", new { identity = Model.Identity, ReturnUrl = Request.RawUrl })' target="_self" class="btn btn-sm btn-default pull-right"><span class="glyphicon glyphicon-wrench">&nbsp;</span>Начальные параметры счетчика воды</a>
             <a href='@Url.Action("ViewPumpParams", "Water", new { identity = Model.Identity, ReturnUrl = Request.RawUrl })' target="_self" class="btn btn-sm btn-default pull-right"><span class="glyphicon glyphicon-indent-right">&nbsp;</span>Номинальные параметры насоса</a>
         </div>
     </div>

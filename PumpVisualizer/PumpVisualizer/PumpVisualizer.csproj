@@ -156,6 +156,7 @@
     <Compile Include="Models\ViewModels\ReportSource.cs" />
     <Compile Include="Models\ViewModels\SimpleMembership\UserInfoMembership.cs" />
     <Compile Include="Models\ViewModels\EWdata.cs" />
+    <Compile Include="Models\ViewModels\WaterImpulsParameter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -283,6 +284,7 @@
     <Content Include="Views\Report\StatByDay.cshtml" />
     <Content Include="Views\Report\StatByMonth.cshtml" />
     <Content Include="Views\Admin\OptimizeDB.cshtml" />
+    <Content Include="Views\Water\EditWaterPumpParams.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
