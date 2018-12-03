@@ -24,8 +24,20 @@
             z-index: 12;
         }
 
-        @@media print{
-            #btnExport, #btnBack{
+        #dataReport {
+            width: 100%;
+            background-color: #fff;
+            border: 1px solid black;
+        }
+
+
+       #dataReport td, #dataReport th{
+           line-height:1.1em;
+       }
+
+            /*dxgvxgvxg*/
+       @@media print {
+            #btnExport, #btnBack;{
             display:none;
             }
         }
@@ -52,7 +64,7 @@
 <a id="btnBack" href='@Url.Action("Index","Report")' class="btn btn-default">&larr; Назад</a>
 
 <div style="width:21cm; margin: 0 auto;">
-    <table id="dataReport" class="table table-condensed table-bordered" style="width:100%; background-color:#fff; border:1px solid black">
+    <table id="dataReport" class="table table-condensed table-bordered">
         <thead style="background-color: #f6f6f6">
             <tr>
                 <th colspan="8" style="text-align:center">
@@ -261,7 +273,7 @@
                 $("#btnExport").click(function () {
                     var htmltable = document.getElementById('dataReport');
                     var html = htmltable.outerHTML;
-                    window.open('data:application/msword,' + '\uFEFF' + encodeURIComponent(html));
+                    window.open('data:application/msword,' + '\uFEFF' + encodeURIComponent(html + html));
                 });
             });
     </script>
