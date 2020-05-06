@@ -68,13 +68,16 @@
                         <th rowspan="2">
                             Давл P, <span class="ed">МПа</span>
                         </th>
-
+                        <th rowspan="2">
+                            Ток дв, <span class="ed">А</span>
+                        </th>
                         <th rowspan="2">
                             Темп Т, <span class="ed">°С</span>
                         </th>
                         <th rowspan="2">
                             !
                         </th>
+                        
                     </tr>
                     <tr>
                         <th>I<sub>1</sub></th>
@@ -102,6 +105,7 @@
                         <td class="text-muted">{{ elem.Frequrency.toFixed(1)  }}</td>
                         <td class="text-danger">{{ elem.CurrentElectricPower.toFixed(3)  }}</td>
                         <td class="text-info">{{ elem.Presure.toFixed(3)  }}</td>
+                        <td class="text-info">{{ elem.EngineAmp.toFixed(3)  }}</td>
                         <td class="text-danger">{{ elem.Temperature.toFixed(1)  }}</td>
                         <td title="Список ошибок счетчика: {{elem.Errors}}" data-ng-class="getClassRowError(elem.Errors)"><span data-ng-if="elem.Errors.length>0"><img src='@Url.Content("~/img/error_icon.png")' height="20"/></span></td>
                     </tr>
@@ -114,6 +118,7 @@
                         <td></td>
                         <td style="text-align: right">всего:</td>
                         <td>{{WaterRate().toFixed(3)}}</td>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>

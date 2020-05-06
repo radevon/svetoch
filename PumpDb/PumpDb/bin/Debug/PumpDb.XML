@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PumpDb</name>
+    </assembly>
+    <members>
+        <member name="T:PumpDb.MethodResult">
+            <summary>
+            Структура, возвращаемая из методов работы с БД - информация о успешности операции
+            </summary>
+        </member>
+        <member name="T:PumpDb.ExternalRepository">
+            <summary>
+             Класс Денису для вставки данных по приборам
+             
+            </summary>
+        </member>
+        <member name="M:PumpDb.ExternalRepository.CreateAllIfNotExist">
+            <summary>
+            создание базы и таблиц если их не существует
+            </summary>
+            <returns>истина - значит ошибок в процессе выполнения не возникало</returns>
+        </member>
+        <member name="M:PumpDb.ExternalRepository.InsertNewRow(System.DateTime,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.String,System.Double)">
+            <summary>
+            Вставка новой строки в таблицу
+            </summary>
+            <param name="recvDate">Дата снятия показания</param>
+            <param name="identity">Идентификатор станции, с которой приходят показания - к нему в программе визуализации привязывается адресс</param>
+            <param name="totalEnergy">Значение параметра энергопотребления</param>
+            <param name="amperage1">Значение тока 1</param>
+            <param name="amperage2">Значение тока 2</param>
+            <param name="amperage3">Значение тока</param>
+            <param name="voltage1">Значение напряжения 1</param>
+            <param name="voltage2">Значение напряжения 2</param>
+            <param name="voltage3">Значение напряжения 3</param>
+            <param name="currentElectricPower">Текущая мощность</param>
+            <param name="totalWaterRate">Общий расход воды</param>
+            <param name="frequrency">Частота</param>
+            <param name="presure">Давление</param>
+            <param name="temperature">Температура</param>
+            <param name="errors">Список ошибок</param>
+            <param name="EngineAmp">Ток мотора</param>
+            <returns>объект MethodResult - характеризующий успешность операции</returns>
+        </member>
+        <member name="M:PumpDb.ExternalRepository.DeleteByDate(System.DateTime,System.DateTime,System.String)">
+            <summary>
+            Удаление данных между 2 датами по заданному объекту
+            </summary>
+            <param name="start">Начальная дата</param>
+            <param name="end">Конечная дата</param>
+            <param name="identity">Идентификатор</param>
+            <returns>объект MethodResult - характеризующий успешность операции</returns>
+        </member>
+        <member name="M:PumpDb.ExternalRepository.DeleteAllByDate(System.DateTime,System.DateTime)">
+            <summary>
+            Удаление данных между 2 датами
+            </summary>
+            <param name="start">Начальная дата</param>
+            <param name="end">Конечная дата</param>
+            <returns>объект MethodResult - характеризующий успешность операции</returns>
+        </member>
+        <member name="M:PumpDb.ExternalRepository.DeleteByIdentity(System.String)">
+            <summary>
+            Удаление данных по объекту
+            </summary>
+            <param name="identity">Идентификатор</param>
+            <returns>объект MethodResult - характеризующий успешность операции</returns>
+        </member>
+        <member name="M:PumpDb.ExternalRepository.DeleteAll">
+            <summary>
+             Метод удаляет таблицу с результатами подсчетов
+            </summary>
+            <returns>Результат удаления всех данных в таблице</returns>
+        </member>
+        <member name="M:PumpDb.LogDbClass.LogToDatabase(System.String,System.DateTime,System.String,System.String,System.String)">
+            <summary>
+            Запись строки в лог таблицу
+            </summary>
+            <param name="FilePath"></param>
+            <param name="MessageDate"></param>
+            <param name="UserName"></param>
+            <param name="MessageType"></param>
+            <param name="MessageText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PumpDb.LogDbClass.GetLogDataCount(System.String)">
+            <summary>
+            количество всех записей в таблице логов
+            </summary>
+            <param name="FilePath">путь к файлу sqlite</param>
+            <returns>число записей целое</returns>
+        </member>
+        <member name="M:PumpDb.Logger.LogToDatabase(System.String,System.DateTime,System.String,System.String,System.String)">
+            <summary>
+            Запись строки в лог таблицу
+            </summary>
+            <param name="FilePath"></param>
+            <param name="MessageDate"></param>
+            <param name="UserName"></param>
+            <param name="MessageType"></param>
+            <param name="MessageText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PumpDb.Logger.GetLogDataCount(System.String)">
+            <summary>
+            количество всех записей в таблице логов
+            </summary>
+            <param name="FilePath">путь к файлу sqlite</param>
+            <returns>число записей целое</returns>
+        </member>
+    </members>
+</doc>

@@ -74,7 +74,8 @@ unicom.controller('UnicomController', ['$scope','$interval','requests',function 
                         WaterKoef: e.koef,
                         WaterStartValue: e.wtr0,
                         WaterCalculated: e.wtrc,
-                        Errors: e.err
+                        Errors: e.err,
+                        EngineAmp:e.enA
                     });
                 });
                 

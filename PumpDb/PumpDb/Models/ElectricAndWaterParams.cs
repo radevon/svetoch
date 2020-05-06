@@ -63,5 +63,9 @@ namespace PumpDb
         [JsonProperty("temp")]
         public double Temperature { get; set; }
 
+        // ток мотора
+        [JsonProperty("enA")]
+        public double EngineAmp { get; set; }
+
     }
 }

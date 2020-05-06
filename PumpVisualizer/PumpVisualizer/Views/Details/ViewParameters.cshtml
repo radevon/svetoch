@@ -284,7 +284,25 @@
             </div>
         </div>
         
-        
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4 col">
+            <div class="panel panel-info panelparam">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3 col-small">
+                            <img src='@Url.Content("~/img/params_icon/tok.gif")' style="position: absolute; width: 85px" />
+                        </div>
+                        <div class="col-xs-9 col-small text-right">
+                            <span class="huge">{{lastData().EngineAmp.toFixed(3)}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <span class="text-muted">Ток<sub>дв</sub>, А</span>
+                    <div class="clearfix"></div>
+                </div>
+
+            </div>
+        </div>
 
     </div>
     <div class="row">
@@ -345,7 +363,7 @@
                 <option value="CurrentElectricPower" class="text-danger">Мощность</option>
                 <option value="Temperature" class="text-danger">Температура</option>
                 <option value="WaterEnergy" class="text-success">Удельн. расх. элект.</option>
-                
+                <option value="EngineAmp" class="text-primary">Ток мотора</option>
             </select>
         </div>
             
@@ -446,7 +464,9 @@
                                     <th rowspan="2">
                                         Давл P, <span class="ed">МПа</span>
                                     </th>
-
+                                    <th rowspan="2">
+                                        Ток дв, <span class="ed">А</span>
+                                    </th>
                                     <th rowspan="2">
                                         Темп Т, <span class="ed">°С</span>
                                     </th>
@@ -480,6 +500,7 @@
                                     <td style="border-left:2px solid lightgray" class="text-muted">{{ elem.Frequrency.toFixed(1)  }}</td>
                                     <td><span data-ng-class="IclassLimit(elem.CurrentElectricPower,Wlimit)">{{ elem.CurrentElectricPower.toFixed(3)  }}</span></td>
                                     <td><span data-ng-class="IclassLimit(elem.Presure,Plimit)">{{ elem.Presure.toFixed(3) }}</span></td>
+                                    <td>{{ elem.EngineAmp.toFixed(3)  }}</td>
                                     <td>{{ elem.Temperature.toFixed(1)  }}</td>
                                     <td title="Список ошибок счетчика: {{elem.Errors}}" data-ng-class="getClassRowError(elem.Errors)"><span data-ng-if="elem.Errors.length>0"><img src='@Url.Content("~/img/error_icon.png")' height="20" /></span></td>
 
@@ -493,6 +514,7 @@
                                     <td></td>
                                     <td style="text-align: right">всего:</td>
                                     <td>{{WaterRate().toFixed(3)}}</td>
+                                    <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>

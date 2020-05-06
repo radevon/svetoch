@@ -276,7 +276,7 @@
                     WaterStartValue: null,
                     WaterCalculated:null,
                     Errors: null,
-
+                    EngineAmp:null
                 };
             }
         };
@@ -333,7 +333,8 @@
                             WaterKoef: e.koef,
                             WaterStartValue: e.wtr0,
                             WaterCalculated: e.wtrc,
-                            Errors: e.err
+                            Errors: e.err,
+                            EngineAmp:e.enA
                         });
                     });
                     $scope.EWdata.dataGraph = [];

@@ -37,7 +37,8 @@ namespace PumpDb
     'Presure' REAL NOT NULL DEFAULT 0,
     'Temperature' REAL NOT NULL DEFAULT 0,
 	'RecvDate'	TEXT NOT NULL,
-	'Errors'	TEXT
+	'Errors'	TEXT,
+    'EngineAmp' REAL NOT NULL DEFAULT 0
 );";
 
         private string WaterKoefTable = @"CREATE TABLE IF NOT EXISTS 'WaterKoefs' (

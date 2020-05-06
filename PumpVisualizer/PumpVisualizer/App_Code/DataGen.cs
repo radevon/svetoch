@@ -16,7 +16,7 @@ namespace PumpVisualizer
             for (int i = 0; i < countMax; i++)
             {
                 repogen.InsertNewRow(start.AddSeconds(i*5), Identity, electric + i, rnd.NextDouble(),rnd.NextDouble(),rnd.NextDouble(),
-                    rnd.NextDouble()*10,rnd.NextDouble()*10,rnd.NextDouble()*10, 3, water + i,50,1367,78, "");
+                    rnd.NextDouble() * 10, rnd.NextDouble() * 10, rnd.NextDouble() * 10, 3, water + i, 50, 1367, 78, "", rnd.NextDouble() * 10);
             }
         }
     }

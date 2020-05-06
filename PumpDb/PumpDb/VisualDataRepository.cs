@@ -116,7 +116,7 @@ namespace PumpDb
 
             using (IDbConnection conn = new SQLiteConnection(this.db_.GetDefaultConnectionString()))
             {
-                parameter = conn.QuerySingleOrDefault<ElectricAndWaterParams>("select Id, Identity, TotalEnergy, Amperage1, Amperage2, Amperage3, Voltage1, Voltage2, Voltage3, CurrentElectricPower, TotalWaterRate, RecvDate, Frequrency, Presure, Temperature, Errors from ElectricAndWaterParams where Id=@id_", new { id_ = id });
+                parameter = conn.QuerySingleOrDefault<ElectricAndWaterParams>("select Id, Identity, TotalEnergy, Amperage1, Amperage2, Amperage3, Voltage1, Voltage2, Voltage3, CurrentElectricPower, TotalWaterRate, RecvDate, Frequrency, Presure, Temperature, Errors, EngineAmp from ElectricAndWaterParams where Id=@id_", new { id_ = id });
             }
             return parameter;
         }
@@ -127,7 +127,7 @@ namespace PumpDb
 
             using (IDbConnection conn = new SQLiteConnection(this.db_.GetDefaultConnectionString()))
             {
-                parameters = conn.Query<ElectricAndWaterParams>("select Id, Identity, TotalEnergy, Amperage1, Amperage2, Amperage3, Voltage1, Voltage2, Voltage3, CurrentElectricPower, TotalWaterRate, RecvDate, Frequrency, Presure, Temperature, Errors from ElectricAndWaterParams where Identity=@identity_ and datetime(recvDate) between @start and @end;", new { identity_ = identity, start = from, end = to });
+                parameters = conn.Query<ElectricAndWaterParams>("select Id, Identity, TotalEnergy, Amperage1, Amperage2, Amperage3, Voltage1, Voltage2, Voltage3, CurrentElectricPower, TotalWaterRate, RecvDate, Frequrency, Presure, Temperature, Errors, EngineAmp from ElectricAndWaterParams where Identity=@identity_ and datetime(recvDate) between @start and @end;", new { identity_ = identity, start = from, end = to });
             }
             return parameters;
         }
@@ -138,7 +138,7 @@ namespace PumpDb
 
             using (IDbConnection conn = new SQLiteConnection(this.db_.GetDefaultConnectionString()))
             {
-                parameters = conn.Query<ElectricAndWaterParams>("select Id, Identity, TotalEnergy, Amperage1, Amperage2, Amperage3, Voltage1, Voltage2, Voltage3, CurrentElectricPower, TotalWaterRate, RecvDate, Frequrency, Presure, Temperature, Errors from ElectricAndWaterParams where Identity=@identity_ order by recvDate desc limit 1;", new { identity_ = identity}).SingleOrDefault();
+                parameters = conn.Query<ElectricAndWaterParams>("select Id, Identity, TotalEnergy, Amperage1, Amperage2, Amperage3, Voltage1, Voltage2, Voltage3, CurrentElectricPower, TotalWaterRate, RecvDate, Frequrency, Presure, Temperature, Errors, EngineAmp from ElectricAndWaterParams where Identity=@identity_ order by recvDate desc limit 1;", new { identity_ = identity }).SingleOrDefault();
             }
             return parameters;
         }
@@ -150,7 +150,7 @@ namespace PumpDb
 
             using (IDbConnection conn = new SQLiteConnection(this.db_.GetDefaultConnectionString()))
             {
-                parameters = conn.Query<ElectricAndWaterParamsExtended>("select param.Id, param.Identity, param.TotalEnergy, param.Amperage1, param.Amperage2, param.Amperage3, param.Voltage1, param.Voltage2, param.Voltage3, param.CurrentElectricPower, param.TotalWaterRate, param.RecvDate, param.Frequrency, param.Presure, param.Temperature, param.Errors, ifnull(k.WaterKoef,1) as WaterKoef, ifnull(k.WaterStartValue,0) as WaterStartValue  from ElectricAndWaterParams param left join WaterKoefs k on param.Identity=k.Identity where param.Identity=@identity_ and datetime(param.recvDate) between @start and @end;", new { identity_ = identity, start = from, end = to });
+                parameters = conn.Query<ElectricAndWaterParamsExtended>("select param.Id, param.Identity, param.TotalEnergy, param.Amperage1, param.Amperage2, param.Amperage3, param.Voltage1, param.Voltage2, param.Voltage3, param.CurrentElectricPower, param.TotalWaterRate, param.RecvDate, param.Frequrency, param.Presure, param.Temperature, param.Errors, param.EngineAmp, ifnull(k.WaterKoef,1) as WaterKoef, ifnull(k.WaterStartValue,0) as WaterStartValue  from ElectricAndWaterParams param left join WaterKoefs k on param.Identity=k.Identity where param.Identity=@identity_ and datetime(param.recvDate) between @start and @end;", new { identity_ = identity, start = from, end = to });
             }
             return parameters;
         }
